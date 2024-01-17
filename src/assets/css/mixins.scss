@@ -1,0 +1,7 @@
+@mixin full-flex-dimensions {
+  align-items: flex-start;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
