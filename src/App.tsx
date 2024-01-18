@@ -1,6 +1,5 @@
-import React from "react";
-import "./App.scss";
 import Header from "./components/common/Header";
+import "./App.scss";
 
 function App() {
   return (

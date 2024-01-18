@@ -1,8 +1,8 @@
-import React from "react";
+import "./styles.scss";
 
 const Header = () => {
   return (
-    <div>
+    <div className="header-container">
       <ul>
         <li>Inicio</li>
         <li>Sobre nós</li>
