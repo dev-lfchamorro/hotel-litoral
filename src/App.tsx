@@ -1,12 +1,15 @@
+import React, { Suspense } from "react";
+import AppRouter from "./navigation/AppRouter";
 import "./App.scss";
-import Header from "./components/common/Header/index";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <Header />
+      <Suspense>
+        <AppRouter />
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;
