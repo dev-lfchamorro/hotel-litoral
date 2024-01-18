@@ -1,12 +1,13 @@
-import React, { lazy } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-
-const Home = lazy(() => import("../../views/Home"));
+import { routes } from "../../config";
 
 const AppRouter: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" Component={Home} />
+      {routes.map((route, idx) => (
+        <Route path={route.path} Component={route.component} key={idx} />
+      ))}
     </Routes>
   );
 };
