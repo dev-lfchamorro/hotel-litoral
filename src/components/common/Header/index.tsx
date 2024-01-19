@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
 import { paths } from "../../../constants";
+import Logo from "../../Logo";
 import "./styles.scss";
 
 const Header = () => {
   return (
     <header id="header-container">
-      <div className="logo">
-        <div className="logo-name">
-          Hotel <span>Litoral</span>
-        </div>
-        <span className="logo-slogan">Espaço, Conforto e Tranquilidade</span>
-      </div>
+      <Logo slogan="Espaço, Conforto e Tranquilidade" />
       <nav className="nav-container">
         <ul className="nav-list">
           <li>
