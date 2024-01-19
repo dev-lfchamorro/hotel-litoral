@@ -1,3 +1,5 @@
+@import "../../assets/css/mixins.scss";
+
 .rooms-container {
-  background-color: rgb(59, 243, 35);
+  @include full-flex-dimensions;
 }

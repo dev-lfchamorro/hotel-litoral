@@ -1,3 +1,5 @@
+@import "../../assets/css/mixins.scss";
+
 .about-us-container {
-  background-color: orange;
+  @include full-flex-dimensions;
 }
