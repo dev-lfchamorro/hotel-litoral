@@ -1,3 +1,6 @@
+@import "../../assets/css/mixins.scss";
+
 .home-container {
+  @include full-flex-dimensions;
   background-color: rgb(58, 55, 223);
 }
