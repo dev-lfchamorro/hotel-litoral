@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import { RoutesConfig } from "../types";
 import { paths } from "../constants";
+import { RoutesConfig } from "../types";
 
 const AboutUs = lazy(() => import("../views/AboutUs"));
 const Contact = lazy(() => import("../views/Contact"));

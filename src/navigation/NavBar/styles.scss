@@ -10,9 +10,7 @@
       transition: color 0.3s ease;
 
       &:hover,
-      &.active,
-      &[href="/"],
-      &[href="/*"] {
+      &.active {
         color: $color-primary;
         font-weight: 400;
       }
