@@ -1,10 +1,21 @@
 @import "../../assets/css/colors.scss";
 
 .nav-container {
-  background-color: rgb(0, 255, 140);
-
   .nav-list {
     display: flex;
     gap: 1rem;
+
+    a {
+      color: $color-sextary;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &.active,
+      &[href="/"],
+      &[href="/*"] {
+        color: $color-primary;
+        font-weight: 400;
+      }
+    }
   }
 }

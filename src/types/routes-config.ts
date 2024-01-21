@@ -1,7 +1,5 @@
-import { paths } from "../constants/paths";
-
 export type RoutesConfig = {
-  path: (typeof paths)[keyof typeof paths];
+  path: string;
   component: React.ComponentType<any>;
   exact?: boolean;
 };
