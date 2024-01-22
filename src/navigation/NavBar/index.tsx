@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, NavLinkProps } from "react-router-dom";
 import { paths } from "../../constants";
 import "./styles.scss";
@@ -22,23 +22,36 @@ const CustomNavLink: React.FC<CustomNavLinkProps> = ({
 };
 
 const NavBar: React.FC = () => {
+  const [visibleMenu, setVisibleMenu] = useState("");
+
+  const handleOpenMenu = () => setVisibleMenu("visible");
+  const handleCloseMenu = () => setVisibleMenu("");
+
   return (
-    <nav className="nav-container">
-      <ul className="nav-list">
-        <li>
-          <CustomNavLink to={paths.home}>Inicio</CustomNavLink>
-        </li>
-        <li>
-          <CustomNavLink to={paths.aboutUs}>Sobre nós</CustomNavLink>
-        </li>
-        <li>
-          <CustomNavLink to={paths.rooms}>Quartos</CustomNavLink>
-        </li>
-        <li>
-          <CustomNavLink to={paths.contact}>Contato</CustomNavLink>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <button className="hamburger-menu-open" onClick={handleOpenMenu}>
+        Abrir
+      </button>
+      <nav className={`nav-container ${visibleMenu}`}>
+        <button className="hamburger-menu-close" onClick={handleCloseMenu}>
+          Cerrar
+        </button>
+        <ul className="nav-list">
+          <li>
+            <CustomNavLink to={paths.home}>Inicio</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to={paths.aboutUs}>Sobre nós</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to={paths.rooms}>Quartos</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to={paths.contact}>Contato</CustomNavLink>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 };
 
