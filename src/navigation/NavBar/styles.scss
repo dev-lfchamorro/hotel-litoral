@@ -52,6 +52,7 @@
     top: 0;
     visibility: hidden;
     width: 100vw;
+    transition: all 200ms ease-out;
 
     .nav-list {
       align-items: flex-end;
@@ -68,5 +69,6 @@
   .visible {
     opacity: 0.99;
     visibility: visible;
+    transition: all 400ms ease;
   }
 }
