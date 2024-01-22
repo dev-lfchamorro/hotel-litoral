@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { NavLink, NavLinkProps } from "react-router-dom";
+import IconList from "../../assets/icons/list.svg";
+import IconX from "../../assets/icons/x.svg";
+import Icon from "../../components/Icon";
+import { IconSize } from "../../components/Icon/enums";
 import { paths } from "../../constants";
 import "./styles.scss";
 
@@ -29,13 +33,23 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <button className="hamburger-menu-open" onClick={handleOpenMenu}>
-        Abrir
-      </button>
+      <Icon
+        brightness={0}
+        className="hamburger-menu-open"
+        onClick={handleOpenMenu}
+        pathIcon={IconList}
+        size={IconSize.md}
+      />
+
       <nav className={`nav-container ${visibleMenu}`}>
-        <button className="hamburger-menu-close" onClick={handleCloseMenu}>
-          Cerrar
-        </button>
+        <Icon
+          brightness={1}
+          className="hamburger-menu-close"
+          onClick={handleCloseMenu}
+          pathIcon={IconX}
+          size={IconSize.xl}
+        />
+
         <ul className="nav-list">
           <li>
             <CustomNavLink to={paths.home}>Inicio</CustomNavLink>
