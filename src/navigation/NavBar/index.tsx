@@ -7,7 +7,7 @@ interface CustomNavLinkProps extends NavLinkProps {
   activeClassName?: string;
 }
 
-// This component is to fix the type error with TypeScript about the activeClassName property
+// TODO: This component is to fix the type error with TypeScript about the activeClassName property
 const CustomNavLink: React.FC<CustomNavLinkProps> = ({
   to,
   children,
