@@ -1,11 +1,6 @@
 import React from "react";
 import "./styles.scss";
-
-type LogoProps = {
-  primaryText?: string;
-  secondaryText?: string;
-  slogan: string;
-};
+import { LogoProps } from "./types";
 
 const Logo: React.FC<LogoProps> = ({
   primaryText = "Hotel",
