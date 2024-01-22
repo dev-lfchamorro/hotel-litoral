@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { paths } from "../../constants";
+import { LogoColors, LogoFontSize } from "./enums";
 import "./styles.scss";
 import { LogoProps } from "./types";
-import { LogoColors, LogoFontSize } from "./enums";
 
 const Logo: React.FC<LogoProps> = ({
   hasPrimaryColors = true,
@@ -18,16 +20,20 @@ const Logo: React.FC<LogoProps> = ({
     : LogoColors.secondary;
 
   return (
-    <div className="logo">
-      <div className="logo-name">
-        <div className={`${classLogoColors} ${classFontSize}`}>
-          {primaryText} <span>{secondaryText}</span>
+    <Link to={paths.home}>
+      <div className="logo">
+        <div className="logo-name">
+          <div className={`${classLogoColors} ${classFontSize}`}>
+            {primaryText} <span>{secondaryText}</span>
+          </div>
         </div>
+        <span className="logo-slogan">
+          <span className={`${classLogoColors} ${classFontSize}`}>
+            {slogan}
+          </span>
+        </span>
       </div>
-      <span className="logo-slogan">
-        <span className={`${classLogoColors} ${classFontSize}`}>{slogan}</span>
-      </span>
-    </div>
+    </Link>
   );
 };
 
