@@ -1,7 +1,37 @@
+//  ** Dimensions **
 @mixin full-flex-dimensions {
   align-items: flex-start;
   display: flex;
   height: 100%;
   justify-content: center;
   width: 100%;
+}
+
+// ** Media queries **
+@mixin mq-extra-small-device {
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mq-small-device {
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-medium-device {
+  // Medium devices (tablets, less than 992px)
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mq-large-device {
+  // Large devices (desktops, less than 1200px)
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
