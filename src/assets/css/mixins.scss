@@ -9,6 +9,13 @@
   width: 100%;
 }
 
+@mixin flex-row-center {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
 // ** Media queries **
 @mixin mq-extra-small-device {
   // Extra small devices (portrait phones, less than 576px)
