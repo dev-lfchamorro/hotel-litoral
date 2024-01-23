@@ -1,0 +1,11 @@
+@import "./../../assets/css/colors.scss";
+@import "./../../assets/css/mixins.scss";
+
+.button {
+  @include flex-row-center;
+  background-color: $color-primary;
+  border: none;
+  box-sizing: border-box;
+  color: $color-sextary;
+  padding: 0.9rem 1.5rem;
+}
