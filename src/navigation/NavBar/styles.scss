@@ -11,6 +11,10 @@
   font-size: 17px;
 }
 
+.buttons-container {
+  @include flex-row-center;
+}
+
 @include mq-extra-small-device {
   .hamburger-menu-open,
   .hamburger-menu-close {

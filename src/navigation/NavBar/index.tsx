@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import IconList from "../../assets/icons/list.svg";
+import IconTelephone from "../../assets/icons/telephone.svg";
 import IconX from "../../assets/icons/x.svg";
+import Button from "../../components/Button";
 import Icon from "../../components/Icon";
 import { IconSize } from "../../components/Icon/enums";
 import MenuOptions from "../MenuOptions";
@@ -33,6 +35,11 @@ const NavBar: React.FC = () => {
 
         <MenuOptions />
       </nav>
+
+      <div className="buttons-container">
+        <Button text="Reservas" />
+        <Button iconPath={IconTelephone} text="+55 79 99988.2442" />
+      </div>
     </>
   );
 };
