@@ -1,15 +1,6 @@
 @import "../../assets/css/colors.scss";
 @import "../../assets/css/mixins.scss";
 
-// ** Fonts **
-@include define-font(
-  "Raleway-Bold",
-  "#{$font-path}/Raleway-Bold.ttf",
-  "truetype",
-  "bold",
-  "normal"
-);
-
 .hamburger-menu-open,
 .hamburger-menu-close {
   cursor: pointer;
@@ -18,22 +9,6 @@
 
 .nav-container {
   font-size: 17px;
-
-  .nav-list {
-    display: flex;
-    gap: 1rem;
-
-    a {
-      color: $color-sextary;
-      transition: color 0.3s ease;
-
-      &:hover,
-      &.active {
-        color: $color-primary;
-        font-weight: 400;
-      }
-    }
-  }
 }
 
 @include mq-extra-small-device {
@@ -57,17 +32,6 @@
     visibility: hidden;
     width: 100vw;
     transition: all 200ms ease-out;
-
-    .nav-list {
-      align-items: flex-end;
-      flex-direction: column;
-
-      & li a {
-        color: $color-tertiary;
-        font-family: Raleway-Bold;
-        font-size: 32px;
-      }
-    }
   }
 
   .visible {
