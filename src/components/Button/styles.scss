@@ -4,8 +4,21 @@
 .button {
   @include flex-row-center;
   background-color: $color-primary;
-  border: none;
+  border: solid $color-primary 1px;
   box-sizing: border-box;
   color: $color-sextary;
+  font-size: 14px;
+  line-height: 25px;
   padding: 0.9rem 1.5rem;
+
+  &:hover {
+    background: $color-sextary;
+    border: solid $color-primary 1px;
+    color: $color-primary;
+    transition: all 300ms ease;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
