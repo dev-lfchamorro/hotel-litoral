@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 //  ** Dimensions **
 @mixin full-flex-dimensions {
   align-items: flex-start;
@@ -33,5 +35,21 @@
   // Large devices (desktops, less than 1200px)
   @media (max-width: 1200px) {
     @content;
+  }
+}
+
+// ** Fonts **
+@mixin define-font(
+  $font-family,
+  $font-path: $font-path,
+  $font-format: "truetype",
+  $font-weight: normal,
+  $font-style: normal
+) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$font-path}") format("#{$font-format}");
+    font-weight: $font-weight;
+    font-style: $font-style;
   }
 }

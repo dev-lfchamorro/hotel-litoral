@@ -1,6 +1,15 @@
 @import "../../assets/css/colors.scss";
 @import "../../assets/css/mixins.scss";
 
+// ** Fonts **
+@include define-font(
+  "Raleway-Bold",
+  "#{$font-path}/Raleway-Bold.ttf",
+  "truetype",
+  "bold",
+  "normal"
+);
+
 .hamburger-menu-open,
 .hamburger-menu-close {
   cursor: pointer;
@@ -28,11 +37,6 @@
 }
 
 @include mq-extra-small-device {
-  @font-face {
-    font-family: raleway;
-    src: url("./../../assets/fonts/ralewey/Raleway-Bold.ttf") format("truetype");
-  }
-
   .hamburger-menu-open,
   .hamburger-menu-close {
     display: block;
@@ -60,7 +64,7 @@
 
       & li a {
         color: $color-tertiary;
-        font-family: raleway;
+        font-family: Raleway-Bold;
         font-size: 32px;
       }
     }
