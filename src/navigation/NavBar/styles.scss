@@ -30,7 +30,7 @@
 
       .hamburger-menu-open,
       .hamburger-menu-close {
-        display: block;
+        display: flex;
       }
 
       .nav-container {
@@ -38,7 +38,7 @@
         background-color: $color-rgba-sextary;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 1rem;
         height: 100vh;
         opacity: 0;
         padding: 2rem;
