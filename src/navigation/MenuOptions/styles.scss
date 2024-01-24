@@ -30,6 +30,8 @@
   .nav-list {
     align-items: flex-end;
     flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 3rem;
 
     & li a {
       color: $color-tertiary;
