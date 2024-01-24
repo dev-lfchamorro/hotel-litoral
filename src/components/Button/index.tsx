@@ -9,9 +9,12 @@ const Button: React.FC<ButtonProps> = ({ iconPath, text, onClick }) => {
     <button className={`button ${cursorType}`} onClick={onClick}>
       {iconPath && (
         <img
-          src={iconPath}
           alt="Icon"
+          height={18}
+          loading="lazy"
+          src={iconPath}
           style={{ filter: "brightness(0) invert(1)" }}
+          width={18}
         />
       )}
       {text}
