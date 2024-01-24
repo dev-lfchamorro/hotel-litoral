@@ -16,6 +16,20 @@
   justify-content: center;
 }
 
+@mixin flex-row-end-center {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+@mixin flex-row-space-between-center {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
 // ** Media queries **
 @mixin mq-extra-small-device {
   // Extra small devices (portrait phones, less than 576px)
