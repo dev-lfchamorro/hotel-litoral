@@ -1,46 +1,71 @@
 @import "../../assets/css/colors.scss";
 @import "../../assets/css/mixins.scss";
 
-.hamburger-menu-open,
-.hamburger-menu-close {
-  cursor: pointer;
-  display: none;
-}
+.nav-bar-container {
+  @include flex-row-end-center;
+  gap: 25px;
 
-.nav-container {
-  font-size: 17px;
-}
+  .navigation-container {
+    @include flex-row-space-between-center;
 
-.buttons-container {
-  @include flex-row-center;
-}
-
-@include mq-extra-small-device {
-  .hamburger-menu-open,
-  .hamburger-menu-close {
-    display: block;
+    .hamburger-menu-open,
+    .hamburger-menu-close {
+      cursor: pointer;
+      display: none;
+    }
   }
 
-  .nav-container {
-    align-items: flex-end;
-    background-color: $color-rgba-sextary;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    height: 100vh;
-    opacity: 0;
-    padding: 2rem;
-    position: fixed;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-    width: 100vw;
-    transition: all 200ms ease-out;
+  .buttons-container {
+    @include flex-row-center;
   }
+}
 
-  .visible {
-    opacity: 0.99;
-    visibility: visible;
-    transition: all 400ms ease;
+// ** Media Queries ** //
+
+// ** md **
+@include mq-medium-device {
+  .nav-bar-container {
+    .navigation-container {
+      order: 1;
+
+      .hamburger-menu-open,
+      .hamburger-menu-close {
+        display: block;
+      }
+
+      .nav-container {
+        align-items: flex-end;
+        background-color: $color-rgba-sextary;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        height: 100vh;
+        opacity: 0;
+        padding: 2rem;
+        position: fixed;
+        right: 0;
+        top: 0;
+        visibility: hidden;
+        width: 100vw;
+        transition: all 200ms ease-out;
+      }
+
+      .visible {
+        opacity: 0.99;
+        visibility: visible;
+        transition: all 400ms ease;
+      }
+    }
+  }
+}
+
+// ** sm **
+@include mq-small-device {
+  .nav-bar-container {
+    .buttons-container {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }

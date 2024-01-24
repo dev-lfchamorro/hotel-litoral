@@ -15,32 +15,34 @@ const NavBar: React.FC = () => {
   const handleCloseMenu = () => setVisibleMenu("");
 
   return (
-    <>
-      <Icon
-        brightness={0}
-        className="hamburger-menu-open"
-        onClick={handleOpenMenu}
-        pathIcon={IconList}
-        size={IconSize.md}
-      />
-
-      <nav className={`nav-container ${visibleMenu}`}>
+    <div className="nav-bar-container">
+      <div className="navigation-container">
         <Icon
-          brightness={1}
-          className="hamburger-menu-close"
-          onClick={handleCloseMenu}
-          pathIcon={IconX}
-          size={IconSize.xl}
+          brightness={0}
+          className="hamburger-menu-open"
+          onClick={handleOpenMenu}
+          pathIcon={IconList}
+          size={IconSize.md}
         />
 
-        <MenuOptions />
-      </nav>
+        <nav className={`nav-container ${visibleMenu}`}>
+          <Icon
+            brightness={1}
+            className="hamburger-menu-close"
+            onClick={handleCloseMenu}
+            pathIcon={IconX}
+            size={IconSize.xl}
+          />
+
+          <MenuOptions />
+        </nav>
+      </div>
 
       <div className="buttons-container">
         <Button text="Reservas" />
         <Button iconPath={IconTelephone} text="+55 79 99988.2442" />
       </div>
-    </>
+    </div>
   );
 };
 
