@@ -26,7 +26,7 @@
   }
 }
 
-@include mq-extra-small-device {
+@include mq-medium-device {
   .nav-list {
     align-items: flex-end;
     flex-direction: column;
