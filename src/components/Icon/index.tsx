@@ -29,6 +29,7 @@ const Icon: React.FC<IconProps> = ({
       <img
         alt="Icon"
         height={size}
+        loading="lazy"
         src={pathIcon}
         style={{ filter: brightnessValue }}
         width={size}

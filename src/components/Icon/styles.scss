@@ -1,5 +1,6 @@
+@import "../../assets/css/mixins.scss";
+
 .icon {
-  align-items: center;
-  display: flex;
+  @include flex-row-center;
   gap: 8px;
 }
