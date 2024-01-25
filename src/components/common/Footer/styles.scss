@@ -1,0 +1,7 @@
+@import "./../../../assets/css/mixins.scss";
+
+.footer-container {
+  @include flex-row-center;
+
+  background-color: red;
+}
