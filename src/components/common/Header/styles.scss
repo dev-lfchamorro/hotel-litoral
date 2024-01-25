@@ -7,5 +7,7 @@
   gap: 1rem;
   justify-content: space-between;
   padding: 1rem 2rem;
-  width: 100%;
+  width: calc(
+    100% - 4rem
+  ); // TODO: 4rem to prevent header from exceeding the width of the parent, due to the gap of 1rem
 }

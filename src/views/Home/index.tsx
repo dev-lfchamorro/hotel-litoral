@@ -5,12 +5,10 @@ import "./styles.scss";
 
 const Home: React.FC = () => {
   return (
-    <>
-      <div className="home-container">
-        <Header />
-      </div>
+    <div className="home-container">
+      <Header />
       <Footer />
-    </>
+    </div>
   );
 };
 
