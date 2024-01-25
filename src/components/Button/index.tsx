@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import { ButtonProps } from "./types";
 
-const Button: React.FC<ButtonProps> = ({ iconPath, text, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  iconPath,
+  iconSize = 18,
+  text,
+  onClick,
+}) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const cursorType = onClick ? "cursor-pointer" : "";
+
+  useEffect(() => {
+    if (iconPath) {
+      const img = new Image();
+      img.src = iconPath;
+      img.onload = () => setImageLoaded(true);
+    }
+  }, [iconPath]);
 
   return (
     <button className={`button ${cursorType}`} onClick={onClick}>
       {iconPath && (
         <img
           alt="Icon"
-          height={18}
+          height={imageLoaded ? iconSize : 18}
           loading="lazy"
           src={iconPath}
           style={{ filter: "brightness(0) invert(1)" }}
-          width={18}
+          width={imageLoaded ? iconSize : 18}
         />
       )}
       {text}
