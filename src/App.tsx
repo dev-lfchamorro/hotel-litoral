@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-import AppRouter from "./navigation/AppRouter";
 import "./App.scss";
+import AppRouter from "./navigation/AppRouter";
 
 const App: React.FC = () => {
   return (
