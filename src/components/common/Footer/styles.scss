@@ -2,6 +2,14 @@
 
 .footer-container {
   @include flex-row-center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 1rem;
+  background-color: rgb(240, 227, 227);
 
-  background-color: red;
+  .general-info-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+  }
 }
