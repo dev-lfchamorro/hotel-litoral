@@ -28,6 +28,15 @@ a {
 }
 
 ul,
+ol,
+p {
+  margin-block-end: inherit;
+  margin-block-start: inherit;
+  margin-inline-start: inherit;
+  padding-inline-start: inherit;
+}
+
+ul,
 ol {
   list-style-type: none;
 }
