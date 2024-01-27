@@ -27,7 +27,11 @@ const Footer: React.FC = () => {
 
         <ListItems items={WeOfferInfo} title="Nós oferecemos" />
 
-        <ListItems items={ImportantInfo} title="Informação importante:" />
+        <ListItems
+          isImportant
+          items={ImportantInfo}
+          title="Informação importante:"
+        />
       </div>
 
       <span className="copy-right">
