@@ -1,15 +1,27 @@
 @import "./../../../assets/css/mixins.scss";
+@import "../../../assets/css/colors.scss";
 
 .footer-container {
-  @include flex-row-center;
-  flex-direction: column;
-  width: 100vw;
+  @include flex-column-center;
   padding: 1rem;
-  background-color: rgb(240, 227, 227);
+  background-color: $color-secondary;
+  width: calc(100% - 2rem);
 
   .general-info-container {
     display: flex;
-    gap: 2rem;
-    justify-content: space-around;
+    gap: 1rem;
+
+    .location-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .copy-right {
+    color: $color-rgba-tertiary;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 20px;
   }
 }

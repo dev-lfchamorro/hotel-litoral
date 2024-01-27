@@ -1,10 +1,14 @@
 import React from "react";
-import "./styles.scss";
+import ListItems from "../../ListItems";
 import Logo from "../../Logo";
 import { LogoFontSize } from "../../Logo/enums";
-import Icon from "../../Icon";
-import IconPhone from "../../../assets/icons/whatsapp.svg";
-import { IconSize } from "../../Icon/enums";
+import {
+  ImportantInfo,
+  LocationInfo,
+  WeDoNotOwnInfo,
+  WeOfferInfo,
+} from "./constants";
+import "./styles.scss";
 
 const Footer: React.FC = () => {
   return (
@@ -17,94 +21,19 @@ const Footer: React.FC = () => {
 
       <div className="general-info-container">
         <div className="location-container">
-          <div className="general-info-location">
-            <span>Nosso endereço</span>
-            <ul>
-              <li>
-                <span>Av.Oceânica, 819</span>
-              </li>
-              <li>
-                <span>Atalaia - Aracaju/SE</span>
-              </li>
-              <li>
-                <Icon
-                  pathIcon={IconPhone}
-                  size={IconSize.sm}
-                  brightness={1}
-                  text="Brasil"
-                />
-              </li>
-            </ul>
-          </div>
-
-          <div className="general-info-location">
-            <span>Nós não possuímos</span>
-            <ul>
-              <li>
-                <Icon
-                  pathIcon={IconPhone}
-                  size={IconSize.sm}
-                  brightness={1}
-                  text="Elevador"
-                />
-              </li>
-              <li>
-                <Icon
-                  pathIcon={IconPhone}
-                  size={IconSize.sm}
-                  brightness={1}
-                  text="Piscina"
-                />
-              </li>
-            </ul>
-          </div>
+          <ListItems items={LocationInfo} title="Nosso endereço" />
+          <ListItems items={WeDoNotOwnInfo} title="Nós não possuímos" />
         </div>
 
-        <div className="we-offer-container">
-          <span>Nós oferecemos</span>
-          <ul>
-            <li>
-              <Icon
-                pathIcon={IconPhone}
-                size={IconSize.sm}
-                brightness={1}
-                text="TV de LED com canais por assinatura"
-              />
-            </li>
-            <li>
-              <Icon
-                pathIcon={IconPhone}
-                size={IconSize.sm}
-                brightness={1}
-                text="WI-FI"
-              />
-            </li>
-            <li>
-              <Icon
-                pathIcon={IconPhone}
-                size={IconSize.sm}
-                brightness={1}
-                text="Ótimo café da manhã (incluso)"
-              />
-            </li>
-          </ul>
-        </div>
+        <ListItems items={WeOfferInfo} title="Nós oferecemos" />
 
-        <div className="important-info-container">
-          <span>Informação importante:</span>
-          <ul>
-            <li>
-              <span>Parcelamos em até 3 vezes sem juros.</span>
-            </li>
-            <li>
-              <span>Crianças até 7 anos não pagam.</span>
-            </li>
-            <li>
-              <span>Os preços podem mudar em feriados e dias com eventos.</span>
-            </li>
-          </ul>
-        </div>
+        <ListItems items={ImportantInfo} title="Informação importante:" />
       </div>
+
+      <span className="copy-right">
+        Direitos Reservados © {new Date().getFullYear()} | Hotel Litoral |
+        Aracaju, Sergipe - Brasil
+      </span>
     </div>
   );
 };
