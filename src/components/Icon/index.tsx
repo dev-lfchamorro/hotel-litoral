@@ -1,15 +1,6 @@
 import React from "react";
-import { IconSize } from "./enums";
 import "./styles.scss";
-
-export type IconProps = {
-  brightness?: 0 | 1;
-  className?: string;
-  pathIcon: string;
-  size: IconSize;
-  text?: string;
-  onClick?: () => void;
-};
+import { IconProps } from "./types";
 
 const Icon: React.FC<IconProps> = ({
   brightness,
