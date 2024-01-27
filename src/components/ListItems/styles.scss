@@ -12,6 +12,10 @@
     font-weight: 700;
   }
 
+  .important-content {
+    text-decoration: underline;
+  }
+
   .list-description {
     color: $color-rgba-tertiary;
     font-size: 12px;
@@ -29,6 +33,17 @@
       align-items: center;
       display: flex;
       gap: 5px;
+    }
+  }
+}
+
+// ** sm **
+@include mq-small-device {
+  .list-items-container {
+    max-width: 300px;
+
+    .list-items {
+      flex-basis: 100%;
     }
   }
 }

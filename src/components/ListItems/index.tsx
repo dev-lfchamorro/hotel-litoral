@@ -4,10 +4,17 @@ import { IconSize } from "../Icon/enums";
 import "./styles.scss";
 import { ListItemsProps } from "./types";
 
-const ListItems: React.FC<ListItemsProps> = ({ items, description, title }) => {
+const ListItems: React.FC<ListItemsProps> = ({
+  description,
+  isImportant,
+  items,
+  title,
+}) => {
+  const importantClassName = isImportant ? "important-content" : "";
+
   return (
     <div className="list-items-container">
-      <span className="list-title">{title}</span>
+      <span className={`list-title ${importantClassName}`}>{title}</span>
 
       {description && <p className="list-description">{description}</p>}
 
@@ -21,7 +28,7 @@ const ListItems: React.FC<ListItemsProps> = ({ items, description, title }) => {
                 brightness={1}
               />
             )}
-            <span>{item.textItem}</span>
+            <span> {`${isImportant ? "-" : ""} ${item.textItem}`}</span>
           </li>
         ))}
       </ul>
