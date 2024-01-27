@@ -3,4 +3,5 @@
 .home-container {
   @include full-flex-dimensions;
   flex-direction: column;
+  overflow-y: auto;
 }
