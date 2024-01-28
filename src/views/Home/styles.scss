@@ -1,5 +1,69 @@
 @import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
 
 .home-container {
   @include full-flex-dimensions;
+
+  .features-container {
+    @include flex-row-space-evenly-center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    width: calc(100% - 4rem);
+
+    .feature-element {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      max-width: 400px;
+      padding: 10px;
+      text-align: center;
+
+      &:hover {
+        path,
+        rect,
+        polygon {
+          fill: $color-primary;
+          transition: all 200ms ease;
+        }
+      }
+
+      .feature-img {
+        height: 90px;
+        width: 90px;
+      }
+
+      .feature-title {
+        color: $color-gray-dark;
+        font-size: 36px;
+        font-weight: 600;
+      }
+
+      .feature-description {
+        color: $color-gray-soft;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@include mq-medium-device {
+  .home-container {
+    .features-container .feature-element {
+      .feature-img {
+        width: 70px;
+      }
+      .feature-title {
+        font-size: 26px;
+      }
+      .feature-description {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
 }
