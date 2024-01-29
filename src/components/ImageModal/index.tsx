@@ -38,7 +38,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
           <img src={imgUrl} alt={getImgNameByPath(imgUrl)} />
 
           <div className="modal-buttons">
-            <div className="modal-buttons-wrapper">
+            <div className="modal-buttons-icons">
               <Icon
                 pathIcon={IconChevronLeft}
                 size={IconSize.xs}
@@ -55,8 +55,8 @@ const ImageModal: React.FC<ImageModalProps> = ({
             </div>
 
             {currentImg && totalImg && (
-              <span>
-                Imagem {currentImg} de {totalImg}
+              <span className="modal-buttons-text">
+                Imagem <b>{currentImg}</b> de <b>{totalImg}</b>
               </span>
             )}
           </div>
