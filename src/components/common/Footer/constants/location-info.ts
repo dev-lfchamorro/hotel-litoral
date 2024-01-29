@@ -1,6 +1,6 @@
-import IconBrazil from "../../../../assets/img/brazil-48.png";
-import IconElevator from "../../../../assets/img/elevator-50.png";
-import IconPool from "../../../../assets/img/pool-50.png";
+import IconBrazil from "../../../../assets/img/icons/brazil-48.png";
+import IconElevator from "../../../../assets/img/icons/elevator-50.png";
+import IconPool from "../../../../assets/img/icons/pool-50.png";
 import { ListItemType } from "../../../../types";
 
 export const LocationInfo: ListItemType[] = [
