@@ -30,8 +30,8 @@ const ImgCarousel: React.FC = () => {
   };
 
   return (
-    <div className="gallery-container">
-      <div className="gallery-wrapper">
+    <div className="img-carousel-container">
+      <div className="img-carousel-wrapper">
         <div className="gallery">
           {galleryImages.map((img, idx) => {
             const altAttribute = getImgNameByPath(img);
@@ -39,7 +39,7 @@ const ImgCarousel: React.FC = () => {
             return (
               <img
                 alt={altAttribute}
-                className="gallery-img"
+                className="img-carousel-img"
                 key={idx + 1}
                 loading="eager"
                 src={img}

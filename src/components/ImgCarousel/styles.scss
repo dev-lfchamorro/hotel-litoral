@@ -1,10 +1,10 @@
 @import "../../assets/css/mixins.scss";
 
-.gallery-container {
+.img-carousel-container {
   width: 100%;
   padding: 1rem 0;
 
-  .gallery-wrapper {
+  .img-carousel-wrapper {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -14,7 +14,7 @@
       flex-wrap: nowrap;
       scroll-snap-align: start;
 
-      & .gallery-img {
+      & .img-carousel-img {
         height: calc(100vw / 4);
         min-height: 200px;
         min-width: 400px;
@@ -26,9 +26,9 @@
 }
 
 @include mq-medium-device {
-  .gallery-container {
-    .gallery-wrapper .gallery {
-      & .gallery-img {
+  .img-carousel-container {
+    .img-carousel-wrapper .gallery {
+      & .img-carousel-img {
         min-width: 200px;
       }
     }
