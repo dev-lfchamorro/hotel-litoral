@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getImgNameByPath } from "../../helpers";
 import Icon from "../Icon";
 import { IconSize } from "../Icon/enums";
@@ -9,13 +9,24 @@ import "./styles.scss";
 import { ImageModalProps } from "./types";
 
 const ImageModal: React.FC<ImageModalProps> = ({
-  imgUrl,
   currentImg,
+  imgUrl,
+  isOpen,
   totalImg,
   onClose,
   onNext,
   onPrev,
 }) => {
+  const [isModalActive, setIsModalActive] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        setIsModalActive(true);
+      }, 10);
+    }
+  }, [isOpen]);
+
   const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
     const targetElement = e.target as HTMLElement;
 
@@ -25,7 +36,10 @@ const ImageModal: React.FC<ImageModalProps> = ({
   };
 
   return (
-    <div className="image-modal-overlay" onClick={handleClose}>
+    <div
+      className={`image-modal-overlay ${isModalActive ? "active" : ""}`}
+      onClick={handleClose}
+    >
       <div className="image-modal-container">
         <Icon
           pathIcon={IconX}
