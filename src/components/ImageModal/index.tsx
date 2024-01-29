@@ -19,14 +19,14 @@ const ImageModal: React.FC<ImageModalProps> = ({
   const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
     const targetElement = e.target as HTMLElement;
 
-    if (targetElement.classList.contains("modal-overlay")) {
+    if (targetElement.classList.contains("image-modal-overlay")) {
       onClose();
     }
   };
 
   return (
-    <div className="modal-overlay" onClick={handleClose}>
-      <div className="modal-container">
+    <div className="image-modal-overlay" onClick={handleClose}>
+      <div className="image-modal-container">
         <Icon
           pathIcon={IconX}
           size={IconSize.xs}
@@ -34,11 +34,11 @@ const ImageModal: React.FC<ImageModalProps> = ({
           className="close-button"
         />
 
-        <div className="modal-content">
+        <div className="image-modal-content">
           <img src={imgUrl} alt={getImgNameByPath(imgUrl)} />
 
-          <div className="modal-buttons">
-            <div className="modal-buttons-icons">
+          <div className="image-modal-buttons">
+            <div className="image-modal-buttons-icons">
               <Icon
                 pathIcon={IconChevronLeft}
                 size={IconSize.xs}
@@ -55,7 +55,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
             </div>
 
             {currentImg && totalImg && (
-              <span className="modal-buttons-text">
+              <span className="image-modal-buttons-text">
                 Imagem <b>{currentImg}</b> de <b>{totalImg}</b>
               </span>
             )}

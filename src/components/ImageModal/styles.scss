@@ -1,6 +1,6 @@
 @import "../../assets/css/colors.scss";
 
-.modal-overlay {
+.image-modal-overlay {
   align-items: center;
   background-color: $color-rgba-tertiary;
   display: flex;
@@ -12,7 +12,7 @@
   width: 100vw;
   z-index: 1;
 
-  .modal-container {
+  .image-modal-container {
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
@@ -28,7 +28,7 @@
       top: 0;
     }
 
-    .modal-content {
+    .image-modal-content {
       align-items: center;
       background-color: $color-secondary;
       border-radius: 5px;
@@ -46,14 +46,14 @@
         width: 100%;
       }
 
-      .modal-buttons {
+      .image-modal-buttons {
         align-items: center;
         display: flex;
         flex-direction: column;
         gap: 5px;
         justify-content: center;
 
-        .modal-buttons-icons {
+        .image-modal-buttons-icons {
           display: flex;
           gap: 20px;
 
@@ -69,7 +69,7 @@
           }
         }
 
-        & .modal-buttons-text {
+        & .image-modal-buttons-text {
           color: $color-gray-soft;
           font-size: small;
           font-style: italic;
