@@ -15,6 +15,7 @@
       scroll-snap-align: start;
 
       & .img-carousel-img {
+        cursor: pointer;
         height: calc(100vw / 4);
         min-height: 200px;
         min-width: 400px;
