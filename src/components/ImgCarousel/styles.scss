@@ -14,7 +14,7 @@
       flex-wrap: nowrap;
       scroll-snap-align: start;
 
-      & img {
+      & .gallery-img {
         height: calc(100vw / 4);
         min-height: 200px;
         min-width: 400px;
@@ -28,7 +28,7 @@
 @include mq-medium-device {
   .gallery-container {
     .gallery-wrapper .gallery {
-      & img {
+      & .gallery-img {
         min-width: 200px;
       }
     }
