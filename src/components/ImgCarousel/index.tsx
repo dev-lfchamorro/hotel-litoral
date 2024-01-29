@@ -50,8 +50,9 @@ const ImgCarousel: React.FC = () => {
 
           {isOpenModal && (
             <ImageModal
-              imgUrl={galleryImages[selectedImageIndex]}
               currentImg={selectedImageIndex + 1}
+              imgUrl={galleryImages[selectedImageIndex]}
+              isOpen={isOpenModal}
               totalImg={galleryImages.length}
               onClose={handleCloseModal}
               onNext={handleNextImage}
