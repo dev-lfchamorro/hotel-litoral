@@ -1,5 +1,6 @@
 import React from "react";
 import Feature from "../../components/Feature";
+import ImgCarousel from "../../components/ImgCarousel";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
 import { features } from "./constants";
@@ -9,9 +10,8 @@ const Home: React.FC = () => {
   return (
     <div className="home-container">
       <Header />
-
       <Feature features={features} />
-
+      <ImgCarousel />
       <Footer />
     </div>
   );
