@@ -1,0 +1,36 @@
+@import "../../assets/css/mixins.scss";
+
+.gallery-container {
+  width: 100%;
+  padding: 1rem 0;
+
+  .gallery-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    .gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      scroll-snap-align: start;
+
+      & img {
+        height: calc(100vw / 4);
+        min-height: 200px;
+        min-width: 400px;
+        scroll-snap-align: start;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mq-medium-device {
+  .gallery-container {
+    .gallery-wrapper .gallery {
+      & img {
+        min-width: 200px;
+      }
+    }
+  }
+}
