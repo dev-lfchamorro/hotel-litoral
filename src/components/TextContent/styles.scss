@@ -17,6 +17,7 @@
 
   .text-content-title {
     color: $color-gray-dark;
+    margin-bottom: 0.8em;
 
     &.small {
       font-size: 25.6px;
@@ -40,6 +41,18 @@
 
     &.right {
       text-align: right;
+    }
+  }
+}
+
+@include mq-medium-device {
+  .text-content-container {
+    .text-content-title {
+      font-size: 25.6px;
+    }
+    .text-content-children {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 }
