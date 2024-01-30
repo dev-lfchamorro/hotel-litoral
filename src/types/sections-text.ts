@@ -1,5 +1,5 @@
-import { EMenuOptions } from "../../../enums/menu-options";
-import { SectionText } from "../../../types";
+import { EMenuOptions } from "../enums";
+import { SectionText } from "./section-text";
 
 type SectionTextMap = {
   [key in EMenuOptions]?: SectionText[];
