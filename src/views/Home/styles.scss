@@ -2,4 +2,5 @@
 
 .home-container {
   @include full-flex-dimensions;
+  gap: 3rem;
 }

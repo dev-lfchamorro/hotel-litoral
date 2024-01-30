@@ -19,6 +19,7 @@
         height: calc(100vw / 4);
         min-height: 200px;
         min-width: 400px;
+        object-fit: cover;
         scroll-snap-align: start;
         width: 100%;
       }
