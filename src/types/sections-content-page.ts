@@ -1,11 +1,11 @@
 import { EMenuOptions } from "../enums";
 import { SectionText } from "./section-text";
 
-type SectionTextMap = {
+type SectionContentMap = {
   [key in EMenuOptions]?: SectionText[];
 };
 
-export const SectionsText: SectionTextMap = {
+export const sectionsContentPage: SectionContentMap = {
   [EMenuOptions.home]: [
     {
       description:
