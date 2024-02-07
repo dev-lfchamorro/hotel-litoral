@@ -1,8 +1,12 @@
 import React from "react";
+import { ReactComponent as IconBeachBed } from "../../assets/icons/beach-bed.svg";
+import { ReactComponent as IconBed } from "../../assets/icons/bed.svg";
+import { ReactComponent as IconHotel } from "../../assets/icons/hotel.svg";
 import ImgSection1 from "../../assets/img/gallery/main-facade.jpeg";
 import Feature from "../../components/Feature";
 import ImgCarousel from "../../components/ImgCarousel";
 import SectionImageText from "../../components/SectionImageText";
+import SectionParallax from "../../components/SectionParallax";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
@@ -29,6 +33,14 @@ const Home: React.FC = () => {
           {section1.description}
         </TextContent>
       </SectionImageText>
+
+      <SectionParallax img={ImgSection1}>
+        <div className="parallax-content-container">
+          <IconHotel className="parallax-content-icon" />
+          <IconBed className="parallax-content-icon" />
+          <IconBeachBed className="parallax-content-icon" />
+        </div>
+      </SectionParallax>
 
       <TextContent orientation="center" size="medium" title={section2.title}>
         {section2.description}
