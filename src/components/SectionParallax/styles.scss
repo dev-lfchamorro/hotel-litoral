@@ -1,0 +1,15 @@
+@import "../../assets/css/colors.scss";
+
+.section-parallax-container {
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  filter: brightness(0.3) hue-rotate(0deg);
+  justify-content: center;
+  min-height: 400px;
+  position: relative;
+  width: 100%;
+}
