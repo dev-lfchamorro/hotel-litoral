@@ -5,35 +5,23 @@
   @include full-flex-dimensions;
   gap: 3rem;
 
-  .parallax-content-container {
-    display: flex;
-    gap: 2em;
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  .parallax-content-icon {
+    width: 12rem;
+    height: 12rem;
 
-    .parallax-content-icon {
-      width: 12rem;
-      height: 12rem;
-
-      path,
-      rect,
-      polygon {
-        fill: $color-sextary;
-      }
+    path,
+    rect,
+    polygon {
+      fill: $color-sextary;
     }
   }
 }
 
 @include mq-medium-device {
   .home-container {
-    .parallax-content-container {
-      gap: 1em;
-
-      .parallax-content-icon {
-        width: 8rem;
-        height: 8rem;
-      }
+    .parallax-content-icon {
+      width: 8rem;
+      height: 8rem;
     }
   }
 }

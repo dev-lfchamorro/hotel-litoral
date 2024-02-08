@@ -35,11 +35,9 @@ const Home: React.FC = () => {
       </SectionImageText>
 
       <SectionParallax img={ImgSection1}>
-        <div className="parallax-content-container">
-          <IconHotel className="parallax-content-icon" />
-          <IconBed className="parallax-content-icon" />
-          <IconBeachBed className="parallax-content-icon" />
-        </div>
+        <IconHotel className="parallax-content-icon" />
+        <IconBed className="parallax-content-icon" />
+        <IconBeachBed className="parallax-content-icon" />
       </SectionParallax>
 
       <TextContent orientation="center" size="medium" title={section2.title}>
