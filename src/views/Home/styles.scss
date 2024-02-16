@@ -3,6 +3,7 @@
 
 .home-container {
   @include full-flex-dimensions;
+  align-items: center;
   gap: 3rem;
 
   .parallax-content-icon {
