@@ -13,6 +13,7 @@ import Header from "../../components/common/Header";
 import { SectionsText } from "../../types";
 import { features } from "./constants";
 import "./styles.scss";
+import Slider from "../../components/Slider";
 
 const Home: React.FC = () => {
   const [section1, section2] = SectionsText.Inicio || [];
@@ -42,6 +43,7 @@ const Home: React.FC = () => {
 
       <TextContent orientation="center" size="medium" title={section2.title}>
         {section2.description}
+        <Slider />
       </TextContent>
 
       <Footer />
