@@ -1,29 +1,37 @@
 @import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
 
 .img-carousel-container {
-  width: 100%;
   padding: 1rem 0;
+  width: 100%;
 
   .img-carousel-wrapper {
     display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    width: 100%;
 
     .gallery {
       display: flex;
       flex-wrap: nowrap;
-      scroll-snap-align: start;
 
       & .img-carousel-img {
-        cursor: pointer;
         height: calc(100vw / 4);
         min-height: 200px;
         min-width: 400px;
         object-fit: cover;
-        scroll-snap-align: start;
+        pointer-events: none;
         width: 100%;
       }
     }
+  }
+
+  .info-text {
+    color: $color-gray-soft;
+    display: flex;
+    font-size: 12px;
+    font-style: italic;
+    gap: 5px;
+    margin-left: 15px;
   }
 }
 
