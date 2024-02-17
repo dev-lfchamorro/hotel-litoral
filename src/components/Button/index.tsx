@@ -3,6 +3,7 @@ import "./styles.scss";
 import { ButtonProps } from "./types";
 
 const Button: React.FC<ButtonProps> = ({
+  className,
   iconPath,
   iconSize = 18,
   text,
@@ -20,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   }, [iconPath]);
 
   return (
-    <button className={`button ${cursorType}`} onClick={onClick}>
+    <button className={`button ${cursorType} ${className}`} onClick={onClick}>
       {iconPath && (
         <img
           alt="Icon"
