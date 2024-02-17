@@ -41,7 +41,12 @@ const Home: React.FC = () => {
         <IconBeachBed className="parallax-content-icon" />
       </SectionParallax>
 
-      <TextContent orientation="center" size="medium" title={section2.title}>
+      <TextContent
+        className="rooms-slider-section"
+        orientation="center"
+        size="medium"
+        title={section2.title}
+      >
         {section2.description}
         <Slider />
       </TextContent>
