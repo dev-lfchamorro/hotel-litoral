@@ -1,0 +1,78 @@
+@import "../../assets/css/colors.scss";
+@import "../../assets/css/mixins.scss";
+
+.item {
+  display: flex;
+  height: 560px;
+  justify-content: center;
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    width: 367px;
+  }
+
+  .button-room {
+    bottom: 30px;
+    position: absolute;
+    width: calc(100% - 4rem);
+  }
+
+  &:hover {
+    background-color: $color-rgba-black;
+
+    img {
+      transition: opacity 0.2s ease;
+      opacity: 0.3;
+    }
+  }
+
+  &:not(:hover) {
+    background-color: $color-rgba-black;
+
+    img {
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+  }
+}
+
+@include mq-large-device {
+  .item {
+    img {
+      width: 280px;
+    }
+
+    .button-room {
+      width: calc(100% - 2rem);
+    }
+  }
+}
+
+@include mq-medium-device {
+  .item {
+    img {
+      width: 335px;
+    }
+  }
+}
+
+@include mq-small-device {
+  .item {
+    height: 400px;
+
+    img {
+      width: 500px;
+    }
+  }
+}
+
+@include mq-extra-small-device {
+  .item {
+    img {
+      width: 270px;
+    }
+  }
+}
