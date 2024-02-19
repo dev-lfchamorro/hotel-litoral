@@ -2,7 +2,9 @@ import React from "react";
 import ImgSection1 from "../../assets/img/gallery/garage.jpeg";
 import ImgSection2 from "../../assets/img/images/landscapes_1.jpg";
 import ImgSection3 from "../../assets/img/images/landscapes_2.jpg";
+import ImgSection4 from "../../assets/img/images/landscapes_3.jpg";
 import SectionImageText from "../../components/SectionImageText";
+import SectionParallax from "../../components/SectionParallax";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
@@ -49,6 +51,10 @@ const AboutUs: React.FC = () => {
           {section3.description}
         </TextContent>
       </SectionImageText>
+
+      <SectionParallax className="section-parallax-container" img={ImgSection4}>
+        <h1>Aquí va un Slider</h1>
+      </SectionParallax>
 
       <Footer />
     </div>

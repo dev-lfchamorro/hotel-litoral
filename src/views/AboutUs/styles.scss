@@ -7,6 +7,10 @@
     margin-bottom: 4rem;
     margin-top: 4rem;
   }
+
+  .section-parallax-container {
+    min-height: 600px;
+  }
 }
 
 @include mq-medium-device {
