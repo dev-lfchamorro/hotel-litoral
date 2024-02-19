@@ -60,6 +60,7 @@ code {
     monospace;
 }
 
+// Scroll
 ::-webkit-scrollbar {
   height: 2px;
   width: 5px;
@@ -71,4 +72,10 @@ code {
 
 ::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px $color-primary;
+}
+
+// Selection text
+::selection {
+  background-color: $color-primary;
+  color: $color-secondary;
 }
