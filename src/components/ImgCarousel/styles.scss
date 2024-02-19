@@ -28,10 +28,16 @@
   .info-text {
     color: $color-gray-soft;
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
+    font-weight: 600;
     gap: 5px;
     margin-left: 15px;
+
+    svg path {
+      fill: $color-primary;
+      filter: saturate(500%);
+    }
   }
 }
 
