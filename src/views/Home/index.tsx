@@ -7,13 +7,13 @@ import Feature from "../../components/Feature";
 import ImgCarousel from "../../components/ImgCarousel";
 import SectionImageText from "../../components/SectionImageText";
 import SectionParallax from "../../components/SectionParallax";
+import Slider from "../../components/Slider";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
 import { SectionsText } from "../../types";
-import { features } from "./constants";
+import { features, roomCardSlider } from "./constants";
 import "./styles.scss";
-import Slider from "../../components/Slider";
 
 const Home: React.FC = () => {
   const [section1, section2] = SectionsText.Inicio || [];
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
         title={section2.title}
       >
         {section2.description}
-        <Slider />
+        <Slider children={roomCardSlider} />
       </TextContent>
 
       <Footer />
