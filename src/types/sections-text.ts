@@ -18,4 +18,21 @@ export const SectionsText: SectionTextMap = {
       title: "Reserve um quarto",
     },
   ],
+  [EMenuOptions.aboutUs]: [
+    {
+      description:
+        "A 100 m da ORLA, em sua parte central, proxime da Passarela do Caranguejo e das Feiras de Artesanatos; o Hotel Litoral oferece aos seus hóspedes o conforto e tranquilidade para passar as ferias do seus sonhos.",
+      title: "Hotel Litoral",
+    },
+    {
+      description:
+        "Oferecemos quartos totalmente confortáveis, você pode ter a total tranquilidade de se hospedar em um hotel localizado em excelente localização e muito próximo da praia, além de ter a vantagem de estar perto da Orla, então seus planos de fim de semana, eles serão realmente variado.",
+      title: "Alojamento",
+    },
+    {
+      description:
+        "Desfrute do conforto de um hotel aconchegante próximo a qualquer atividade noturna ou matinal, como você preferir, pois estamos localizados no centro da Orla de Atalaya, um lugar privilegiado para relaxar na praia a apenas 5 minutos e cercar-se dos melhores bares na cidade para curtir uma noite de música ao vivo e excelente ambiente.",
+      title: "Lugar ideal",
+    },
+  ],
 };
