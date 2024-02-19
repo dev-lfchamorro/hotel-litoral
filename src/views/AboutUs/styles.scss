@@ -2,4 +2,18 @@
 
 .about-us-container {
   @include full-flex-dimensions;
+
+  .section1-container {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+}
+
+@include mq-medium-device {
+  .about-us-container {
+    .section1-container {
+      margin-bottom: inherit;
+      margin-top: inherit;
+    }
+  }
 }
