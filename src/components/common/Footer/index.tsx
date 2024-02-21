@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
   return (
     <div className="footer-container">
       <Logo
+        className="logo-footer"
         fontSize={LogoFontSize.lg}
         hasPrimaryColors={false}
         slogan="desde 2005"
