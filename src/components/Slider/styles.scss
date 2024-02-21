@@ -1,58 +1,37 @@
 @import "../../assets/css/colors.scss";
 @import "../../assets/css/mixins.scss";
 
-.rooms-slider-section {
-  max-width: 1160px;
-  width: 100%;
+.slider-container {
+  margin: 2rem auto;
+  overflow: hidden;
+  width: 1160px;
 
-  .slider-container {
-    margin: 2rem auto;
-    overflow: hidden;
-    width: 1160px;
-
-    .slider {
-      display: flex;
-      gap: 30px;
-    }
+  .slider {
+    display: flex;
+    gap: 30px;
   }
 }
 
 @include mq-large-device {
-  .rooms-slider-section {
-    max-width: 900px;
-
-    .slider-container {
-      width: 900px;
-    }
+  .slider-container {
+    width: 900px;
   }
 }
 
 @include mq-medium-device {
-  .rooms-slider-section {
-    max-width: 700px;
-
-    .slider-container {
-      width: 700px;
-    }
+  .slider-container {
+    width: 700px;
   }
 }
 
 @include mq-small-device {
-  .rooms-slider-section {
-    max-width: 500px;
-
-    .slider-container {
-      width: 500px;
-    }
+  .slider-container {
+    width: 500px;
   }
 }
 
 @include mq-extra-small-device {
-  .rooms-slider-section {
-    max-width: 270px;
-
-    .slider-container {
-      width: 270px;
-    }
+  .slider-container {
+    width: 270px;
   }
 }
