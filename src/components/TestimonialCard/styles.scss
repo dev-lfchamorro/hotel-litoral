@@ -9,7 +9,7 @@
   height: 400px;
   justify-content: space-evenly;
   padding: 10px;
-  width: 300px;
+  min-width: 345px;
 
   .star-rating {
     display: flex;
@@ -23,14 +23,17 @@
   .title {
     font-size: 18px;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1;
+    text-align: center;
   }
 
   .description {
+    align-items: center;
     color: $color-gray-soft;
+    display: flex;
     font-size: 15px;
     height: 110px;
-    line-height: 2;
+    justify-content: center;
     overflow: hidden;
     text-align: center;
     text-overflow: ellipsis;
