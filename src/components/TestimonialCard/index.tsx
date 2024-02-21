@@ -26,9 +26,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         })}
       </span>
 
-      <span className="title">{title}</span>
+      <span className="title">{title.slice(0, 65)}</span>
       <span className="description" title={description}>
-        “{description}”
+        “{description?.slice(0, 228)}”
       </span>
 
       <div className="avatar">
