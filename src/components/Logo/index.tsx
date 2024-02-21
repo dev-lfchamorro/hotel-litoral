@@ -6,6 +6,7 @@ import "./styles.scss";
 import { LogoProps } from "./types";
 
 const Logo: React.FC<LogoProps> = ({
+  className,
   hasPrimaryColors = true,
   fontSize,
   primaryText = "Hotel",
@@ -21,7 +22,7 @@ const Logo: React.FC<LogoProps> = ({
 
   return (
     <Link to={paths.home}>
-      <div className="logo">
+      <div className={`logo ${className}`}>
         <div className="logo-name">
           <div className={`${classLogoColors} ${classFontSize}`}>
             {primaryText} <span>{secondaryText}</span>
