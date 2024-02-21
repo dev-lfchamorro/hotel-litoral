@@ -58,3 +58,48 @@
     line-height: 1.2;
   }
 }
+
+@include mq-large-device {
+  .testimonial-item {
+    min-width: 260px;
+  }
+}
+
+@include mq-medium-device {
+  .testimonial-item {
+    min-width: 315px;
+  }
+}
+
+@include mq-small-device {
+  .testimonial-item {
+    height: 300px;
+    min-width: 215px;
+
+    .title {
+      font-size: 14px;
+      height: 30px;
+    }
+
+    .description {
+      font-size: 12px;
+      height: 90px;
+    }
+
+    .avatar {
+      height: 70px;
+      width: 70px;
+    }
+
+    .author {
+      font-size: 12px;
+      line-height: 0.5;
+    }
+  }
+}
+
+@include mq-extra-small-device {
+  .testimonial-item {
+    min-width: 230px;
+  }
+}
