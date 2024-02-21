@@ -5,10 +5,12 @@ import ImgSection3 from "../../assets/img/images/landscapes_2.jpg";
 import ImgSection4 from "../../assets/img/images/landscapes_3.jpg";
 import SectionImageText from "../../components/SectionImageText";
 import SectionParallax from "../../components/SectionParallax";
+import Slider from "../../components/Slider";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
 import { SectionsText } from "../../types";
+import { testimonialCardSlider } from "./constants";
 import "./styles.scss";
 
 const AboutUs: React.FC = () => {
@@ -53,7 +55,7 @@ const AboutUs: React.FC = () => {
       </SectionImageText>
 
       <SectionParallax className="section-parallax-container" img={ImgSection4}>
-        <h1>Aquí va un Slider</h1>
+        <Slider children={testimonialCardSlider} />
       </SectionParallax>
 
       <Footer />
