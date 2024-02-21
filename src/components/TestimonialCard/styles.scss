@@ -1,0 +1,30 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.testimonial-item {
+  @include flex-column-center;
+  background-color: $color-sextary;
+  padding: 10px;
+
+  .star-rating {
+    display: flex;
+    gap: 5px;
+
+    svg path {
+      fill: $color-yellow-dark;
+    }
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    object-fit: cover;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
