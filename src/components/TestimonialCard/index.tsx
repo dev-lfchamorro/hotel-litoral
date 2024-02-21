@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { ReactComponent as IconStartFill } from "../../assets/icons/star-fill.svg";
+import { ReactComponent as IconStart } from "../../assets/icons/star.svg";
 import { getImgNameByPath } from "../../helpers";
 import "./styles.scss";
 import { TestimonialCardProps } from "./types";
-import { ReactComponent as IconStartFill } from "../../assets/icons/star-fill.svg";
-import { ReactComponent as IconStart } from "../../assets/icons/star.svg";
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   avatar,
@@ -25,11 +25,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           );
         })}
       </span>
+
       <span className="title">{title}</span>
-      <span className="description">{description}</span>
+      <span className="description" title={description}>
+        “{description}”
+      </span>
+
       <div className="avatar">
         <img src={avatar} alt={getImgNameByPath(avatar)} />
       </div>
+
       <span className="author">
         {author}, {country}
       </span>
