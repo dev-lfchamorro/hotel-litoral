@@ -3,6 +3,7 @@ import ImgSection1 from "../../assets/img/gallery/garage.jpeg";
 import ImgSection2 from "../../assets/img/images/landscapes_1.jpg";
 import ImgSection3 from "../../assets/img/images/landscapes_2.jpg";
 import ImgSection4 from "../../assets/img/images/landscapes_3.jpg";
+import AnimatedNumbers from "../../components/AnimatedNumbers";
 import SectionImageText from "../../components/SectionImageText";
 import SectionParallax from "../../components/SectionParallax";
 import Slider from "../../components/Slider";
@@ -41,6 +42,8 @@ const AboutUs: React.FC = () => {
         <TextContent orientation="left" size="large" title={section2.title}>
           {section2.description}
         </TextContent>
+
+        <AnimatedNumbers />
       </SectionImageText>
 
       <SectionImageText
