@@ -11,11 +11,12 @@ import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
 import { SectionsText } from "../../types";
-import { testimonialCardSlider } from "./constants";
+import { animatedNumbersContent, testimonialCardSlider } from "./constants";
 import "./styles.scss";
 
 const AboutUs: React.FC = () => {
   const [section1, section2, section3] = SectionsText["Sobre nós"] || [];
+  const animatedNumbersSection1 = animatedNumbersContent.section1 || [];
 
   return (
     <div className="about-us-container">
@@ -43,7 +44,7 @@ const AboutUs: React.FC = () => {
           {section2.description}
         </TextContent>
 
-        <AnimatedNumbers />
+        <AnimatedNumbers content={animatedNumbersSection1} />
       </SectionImageText>
 
       <SectionImageText
