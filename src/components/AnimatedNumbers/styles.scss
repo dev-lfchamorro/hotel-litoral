@@ -1,0 +1,27 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.animated-numbers-container {
+  color: $color-tertiary;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+
+  .content-numbers {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 1rem;
+
+    .number {
+      font-size: 72px;
+    }
+
+    .text {
+      font-size: 16px;
+      color: $color-gray-soft;
+    }
+  }
+}
