@@ -13,6 +13,7 @@ import Header from "../../components/common/Header";
 import { SectionsText } from "../../types";
 import { animatedNumbersContent, testimonialCardSlider } from "./constants";
 import "./styles.scss";
+import CircularProgressBar from "../../components/CircularProgressBar";
 
 const AboutUs: React.FC = () => {
   const [section1, section2, section3] = SectionsText["Sobre nós"] || [];
@@ -56,6 +57,8 @@ const AboutUs: React.FC = () => {
         <TextContent orientation="left" size="large" title={section3.title}>
           {section3.description}
         </TextContent>
+
+        <CircularProgressBar />
       </SectionImageText>
 
       <SectionParallax className="section-parallax-container" img={ImgSection4}>
