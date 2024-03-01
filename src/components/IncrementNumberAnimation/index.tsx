@@ -19,9 +19,9 @@ const IncrementNumberAnimation: React.FC<IncrementNumberAnimationProps> = ({
   });
 
   return (
-    <animated.span className={className} ref={ref}>
-      {number.to((val) => Math.floor(val))}
-    </animated.span>
+    <div className={className} ref={ref}>
+      <animated.span>{number.to((val) => Math.floor(val))}</animated.span>
+    </div>
   );
 };
 
