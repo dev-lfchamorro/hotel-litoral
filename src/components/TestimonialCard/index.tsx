@@ -19,9 +19,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <span className="star-rating">
         {Array.from({ length: 5 }, (_, idx) => {
           return idx + 1 > starRating ? (
-            <IconStart className="star-icon" />
+            <IconStart className="star-icon" key={idx + 1} />
           ) : (
-            <IconStartFill className="star-icon" />
+            <IconStartFill className="star-icon" key={idx + 1} />
           );
         })}
       </span>

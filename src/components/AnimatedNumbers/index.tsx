@@ -8,8 +8,8 @@ const AnimatedNumbers: React.FC<{ content: AnimatedNumbersProps[] }> = ({
 }) => {
   return (
     <div className="animated-numbers-container">
-      {content.map(({ text, endValue, speed, sizeContent }) => (
-        <div className="content-numbers">
+      {content.map(({ text, endValue, speed, sizeContent }, idx) => (
+        <div className="content-numbers" key={idx + 1}>
           <IncrementNumberAnimation
             className={`number ${sizeContent || "medium"}`}
             endValue={endValue}
