@@ -15,4 +15,9 @@ export const animatedNumbersContent: AnimatedNumbersContent = {
     },
     { endValue: 10, text: "Estacionamentos", sizeContent: "big", speed: 2500 },
   ],
+  section2: [
+    { endValue: 90, text: "Bom serviço", speed: 10 },
+    { endValue: 85, text: "Turistas", speed: 15 },
+    { endValue: 95, text: "Satisfação", speed: 5 },
+  ],
 };
