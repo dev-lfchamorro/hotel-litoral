@@ -1,37 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { EColors, EMainColors } from "../../enums";
 import "./styles.scss";
+import { CircularProgressBarProps } from "./types";
 
-const CircularProgressBar: React.FC = () => {
-  let circularProgress = document.querySelector(".circular-progress") as any,
-    progressValue = document.querySelector(".progress-value");
+const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
+  endValue,
+  speed,
+  text,
+}) => {
+  const [progressStartValue, setProgressStartValue] = useState(0);
 
-  let progressStartValue = 0,
-    progressEndValue = 83,
-    speed = 40;
+  const progressValue = `${progressStartValue}%`;
+  const progressEndValue = endValue;
 
-  let progress = setInterval(() => {
-    progressStartValue++;
+  const circularProgressStyle = {
+    background: `conic-gradient(${EMainColors.primary} ${
+      progressStartValue * 3.6
+    }deg, ${EColors.white} 0deg)`,
+  };
 
-    if (progressValue && circularProgress) {
-      progressValue.textContent = `${progressStartValue}%`;
-      circularProgress.style.background = `conic-gradient(#f0ff ${
-        progressStartValue * 3.6
-      }deg, #ededed 0deg)`;
-    }
+  useEffect(() => {
+    const progress = setInterval(() => {
+      setProgressStartValue((prevValue) => {
+        const nextValue = prevValue + 1;
 
-    if (progressStartValue === progressEndValue) {
+        if (nextValue <= progressEndValue) {
+          return nextValue;
+        } else {
+          clearInterval(progress);
+          return prevValue;
+        }
+      });
+    }, speed);
+
+    return () => {
       clearInterval(progress);
-    }
-    console.log(progressStartValue);
-  }, speed);
+    };
+  }, [speed, progressEndValue]);
 
   return (
-    <div className="container">
-      <div className="circular-progress">
-        <span className="progress-value">0%</span>
+    <div className="circular-progress-container">
+      <div className="circular-progress" style={circularProgressStyle}>
+        <div className="circular-progress-content">
+          <span className="progress-value">{progressValue}</span>
+          <span className="text">{text}</span>
+        </div>
       </div>
-
-      <span className="text">HTML & CSS</span>
     </div>
   );
 };
