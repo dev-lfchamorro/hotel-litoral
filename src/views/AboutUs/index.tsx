@@ -4,6 +4,7 @@ import ImgSection2 from "../../assets/img/images/landscapes_1.jpg";
 import ImgSection3 from "../../assets/img/images/landscapes_2.jpg";
 import ImgSection4 from "../../assets/img/images/landscapes_3.jpg";
 import AnimatedNumbers from "../../components/AnimatedNumbers";
+import CircularProgressBar from "../../components/CircularProgressBar";
 import SectionImageText from "../../components/SectionImageText";
 import SectionParallax from "../../components/SectionParallax";
 import Slider from "../../components/Slider";
@@ -13,11 +14,11 @@ import Header from "../../components/common/Header";
 import { SectionsText } from "../../types";
 import { animatedNumbersContent, testimonialCardSlider } from "./constants";
 import "./styles.scss";
-import CircularProgressBar from "../../components/CircularProgressBar";
 
 const AboutUs: React.FC = () => {
   const [section1, section2, section3] = SectionsText["Sobre nós"] || [];
   const animatedNumbersSection1 = animatedNumbersContent.section1 || [];
+  const animatedNumbersSection2 = animatedNumbersContent?.section2 || [];
 
   return (
     <div className="about-us-container">
@@ -58,7 +59,16 @@ const AboutUs: React.FC = () => {
           {section3.description}
         </TextContent>
 
-        <CircularProgressBar />
+        <div className="circular-progress-bar-wrapper">
+          {animatedNumbersSection2.map((content, idx) => (
+            <CircularProgressBar
+              endValue={content.endValue}
+              key={idx + 1}
+              speed={content.speed || 50}
+              text={content.text}
+            />
+          ))}
+        </div>
       </SectionImageText>
 
       <SectionParallax className="section-parallax-container" img={ImgSection4}>
