@@ -5,6 +5,7 @@
   @include full-flex-dimensions;
   align-items: center;
   gap: 3rem;
+  overflow-y: initial;
 
   .parallax-content-icon {
     width: 12rem;

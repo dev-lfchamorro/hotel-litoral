@@ -13,6 +13,7 @@ body {
     sans-serif;
   font-size: 18px;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   scroll-behavior: smooth;
 }
@@ -20,7 +21,6 @@ body {
 #root,
 #root > div {
   height: 100vh;
-  overflow: hidden;
   white-space: pre-line;
   width: 100vw;
 }

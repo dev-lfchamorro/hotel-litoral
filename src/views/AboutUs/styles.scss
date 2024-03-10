@@ -2,6 +2,7 @@
 
 .about-us-container {
   @include full-flex-dimensions;
+  overflow-y: initial;
 
   .section1-container {
     margin-bottom: 4rem;
