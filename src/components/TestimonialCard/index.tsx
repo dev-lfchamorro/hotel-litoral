@@ -32,7 +32,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </span>
 
       <div className="avatar">
-        <img src={avatar} alt={getImgNameByPath(avatar)} />
+        {typeof avatar === "string" ? (
+          <img src={avatar} alt={getImgNameByPath(avatar)} />
+        ) : (
+          avatar
+        )}
       </div>
 
       <span className="author">
