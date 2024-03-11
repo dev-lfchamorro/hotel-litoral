@@ -1,6 +1,7 @@
 @import "./variables.scss";
+@import "./colors.scss";
 
-//  ** Dimensions **
+//  ** Flexbox **
 @mixin full-flex-dimensions {
   align-items: flex-start;
   display: flex;
@@ -96,5 +97,36 @@
     src: url("#{$font-path}") format("#{$font-format}");
     font-weight: $font-weight;
     font-style: $font-style;
+  }
+}
+
+// ** Universals **
+@mixin cover-content-styles($text-color) {
+  @include flex-column-center;
+  color: $text-color;
+  font-size: 25px;
+  font-weight: 600;
+  gap: 1rem;
+  padding: 2rem;
+  position: absolute;
+  text-align: center;
+  transition: all 200ms ease;
+
+  .cover-content-btn {
+    border-radius: 5px;
+    width: 250px;
+  }
+}
+
+@mixin cover-content-styles-mq-small-device {
+  font-size: 16px;
+
+  .cover-content-btn {
+    padding: 10px;
+    width: 190px;
+
+    span {
+      font-size: 16px !important;
+    }
   }
 }
