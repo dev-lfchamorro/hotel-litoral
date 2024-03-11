@@ -12,7 +12,9 @@
 
 .nav-list {
   display: flex;
-  gap: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 2rem;
 
   a {
     color: $color-sextary;
@@ -21,7 +23,7 @@
     &:hover,
     &.active {
       color: $color-primary;
-      font-weight: 400;
+      font-weight: 600;
     }
   }
 }
