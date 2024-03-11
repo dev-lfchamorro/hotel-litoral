@@ -3,5 +3,6 @@ export type ButtonProps = {
   iconPath?: string;
   iconSize?: number;
   text: string;
+  textSize?: number;
   onClick?: () => void;
 };

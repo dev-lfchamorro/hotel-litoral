@@ -7,6 +7,7 @@ const Button: React.FC<ButtonProps> = ({
   iconPath,
   iconSize = 18,
   text,
+  textSize,
   onClick,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -32,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
           width={imageLoaded ? iconSize : 18}
         />
       )}
-      {text}
+      <span style={{ fontSize: textSize || 16 }}>{text}</span>
     </button>
   );
 };
