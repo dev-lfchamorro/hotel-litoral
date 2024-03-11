@@ -8,6 +8,8 @@ const Header: React.FC = () => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
+    window.scrollBy(0, 1);
+
     window.addEventListener("scroll", handleScroll, true);
 
     return () => {
