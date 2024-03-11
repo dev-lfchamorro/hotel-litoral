@@ -7,6 +7,22 @@
   gap: 3rem;
   overflow-y: initial;
 
+  .cover-content {
+    @include flex-column-center;
+    color: $color-sextary;
+    font-size: 25px;
+    font-weight: 600;
+    gap: 1rem;
+    padding: 2rem;
+    position: absolute;
+    text-align: center;
+
+    .cover-content-btn {
+      border-radius: 5px;
+      width: 250px;
+    }
+  }
+
   .parallax-content-icon {
     width: 12rem;
     height: 12rem;
@@ -47,6 +63,19 @@
 
 @include mq-small-device {
   .home-container {
+    .cover-content {
+      font-size: 16px;
+
+      .cover-content-btn {
+        padding: 10px;
+        width: 190px;
+
+        span {
+          font-size: 16px !important;
+        }
+      }
+    }
+
     .rooms-slider-section {
       max-width: 500px;
     }
