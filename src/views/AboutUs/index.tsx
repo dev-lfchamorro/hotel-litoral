@@ -1,16 +1,21 @@
 import React from "react";
+import ImgWhatsApp from "../../assets/icons/whatsapp.svg";
 import ImgSection1 from "../../assets/img/gallery/garage.jpeg";
+import ImgReception2 from "../../assets/img/gallery/reception-2.jpeg";
 import ImgSection2 from "../../assets/img/images/landscapes_1.jpg";
 import ImgSection3 from "../../assets/img/images/landscapes_2.jpg";
 import ImgSection4 from "../../assets/img/images/landscapes_3.jpg";
 import AnimatedNumbers from "../../components/AnimatedNumbers";
+import Button from "../../components/Button";
 import CircularProgressBar from "../../components/CircularProgressBar";
+import CoverContent from "../../components/CoverContent";
 import SectionImageText from "../../components/SectionImageText";
 import SectionParallax from "../../components/SectionParallax";
 import Slider from "../../components/Slider";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
+import { staticValues } from "../../constants";
 import { SectionsText } from "../../types";
 import { animatedNumbersContent, testimonialCardSlider } from "./constants";
 import "./styles.scss";
@@ -23,6 +28,18 @@ const AboutUs: React.FC = () => {
   return (
     <div className="about-us-container">
       <Header />
+
+      <CoverContent bgImg={ImgReception2}>
+        <div className="cover-content">
+          {staticValues.coverText}
+          <Button
+            className="cover-content-btn"
+            text={staticValues.whatsApp}
+            iconPath={ImgWhatsApp}
+            textSize={20}
+          />
+        </div>
+      </CoverContent>
 
       <SectionImageText
         className="section1-container"

@@ -3,4 +3,16 @@
 .contact-container {
   @include full-flex-dimensions;
   overflow-y: initial;
+
+  .cover-content {
+    @include cover-content-styles($color-sextary);
+  }
+}
+
+@include mq-small-device {
+  .contact-container {
+    .cover-content {
+      @include cover-content-styles-mq-small-device;
+    }
+  }
 }
