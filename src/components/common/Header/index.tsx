@@ -9,6 +9,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     window.scrollBy(0, 1);
+    window.scrollBy(0, -1);
 
     window.addEventListener("scroll", handleScroll, true);
 
