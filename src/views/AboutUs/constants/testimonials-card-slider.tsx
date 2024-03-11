@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import ImgRoom1 from "../../../assets/img/gallery/room-1.jpeg";
+import Avatar from "react-avatar";
 import TestimonialCard from "../../../components/TestimonialCard";
 import { TestimonialCardProps } from "../../../components/TestimonialCard/types";
 
 const testimonialsCardContent: TestimonialCardProps[] = [
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Maria" />,
     country: "Chile",
     description:
       "Es limpio y cómodo, buena relación precio calidad. Camas y ahmohadas comodas.",
@@ -15,7 +15,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Maria",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Audrei" />,
     country: "Brasil",
     description: "Local aconchegante, próximo da orla.",
     gender: "male",
@@ -24,7 +24,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Audrei",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Gustavo" />,
     country: "Brasil",
     description:
       "O café da manhã é simples, mas saboroso. Funcionárias são super atenciosas. O quarto é arrumado e as roupas de banho trocadas DIARIAMENTE.",
@@ -34,7 +34,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Gustavo",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Joao" />,
     country: "Brasil",
     description: "Do atendimento, da localização e do café da manhã",
     gender: "male",
@@ -43,7 +43,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Joao",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Mascarenhasvo" />,
     country: "Brasil",
     description: "Tudooo",
     gender: "female",
@@ -52,7 +52,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Mascarenhasvo",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Almerindo" />,
     country: "Brasil",
     description:
       "Já fiquei no Hotel Litoral outras vezes. Ótima relação custo x benefício. Hotel receptivo, perto da praia, facilidade de acesso a vários pontos da orla, equipe atenciosa, bom café da manhã, bom quarto.",
@@ -62,7 +62,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Almerindo",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Lins" />,
     description:
       "Da hospitalidade e proatividade em ajudar com meu filho de 4 anos.",
     gender: "male",
@@ -71,7 +71,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Lins",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Suely" />,
     country: "Brasil",
     description: "Limpeza, café da manhã, localização, conforto das camas",
     gender: "female",
@@ -80,7 +80,7 @@ const testimonialsCardContent: TestimonialCardProps[] = [
     author: "Suely",
   },
   {
-    avatar: ImgRoom1,
+    avatar: <Avatar name="Walace" />,
     country: "Brasil",
     description: "Custo/beneficio",
     gender: "female",
