@@ -1,4 +1,5 @@
 @import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
 
 .rooms-container {
   @include full-flex-dimensions;
@@ -12,6 +13,20 @@
   .rooms-section {
     margin-top: 4rem;
     width: 70%;
+
+    .rooms-card-wrapper {
+      @include flex-row-center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+}
+
+@include mq-large-device {
+  .rooms-container {
+    .rooms-section {
+      width: 90%;
+    }
   }
 }
 

@@ -9,6 +9,7 @@ import { staticValues } from "../../constants";
 import "./styles.scss";
 import TextContent from "../../components/TextContent";
 import { SectionsText } from "../../types";
+import RoomCard from "../../components/RoomCard";
 
 const Rooms: React.FC = () => {
   const [section1] = SectionsText["Quartos"] || [];
@@ -32,6 +33,14 @@ const Rooms: React.FC = () => {
       <div className="rooms-section">
         <TextContent orientation="center" size="medium" title={section1.title}>
           {section1.description}
+
+          <div className="rooms-card-wrapper">
+            <RoomCard image={ImgRoom4} />
+            <RoomCard image={ImgRoom4} />
+            <RoomCard image={ImgRoom4} />
+            <RoomCard image={ImgRoom4} />
+            <RoomCard image={ImgRoom4} />
+          </div>
         </TextContent>
       </div>
 
