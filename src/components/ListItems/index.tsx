@@ -5,6 +5,7 @@ import "./styles.scss";
 import { ListItemsProps } from "./types";
 
 const ListItems: React.FC<ListItemsProps> = ({
+  className,
   description,
   isImportant,
   items,
@@ -13,7 +14,7 @@ const ListItems: React.FC<ListItemsProps> = ({
   const importantClassName = isImportant ? "important-content" : "";
 
   return (
-    <div className="list-items-container">
+    <div className={`list-items-container ${className || ""}`}>
       <span className={`list-title ${importantClassName}`}>{title}</span>
 
       {description && <p className="list-description">{description}</p>}
