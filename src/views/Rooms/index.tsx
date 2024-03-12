@@ -3,13 +3,14 @@ import ImgWhatsApp from "../../assets/icons/whatsapp.svg";
 import ImgRoom4 from "../../assets/img/gallery/room-4.jpeg";
 import Button from "../../components/Button";
 import CoverContent from "../../components/CoverContent";
+import RoomCard from "../../components/RoomCard";
+import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
 import { staticValues } from "../../constants";
-import "./styles.scss";
-import TextContent from "../../components/TextContent";
 import { SectionsText } from "../../types";
-import RoomCard from "../../components/RoomCard";
+import { roomsCardContent } from "./constants";
+import "./styles.scss";
 
 const Rooms: React.FC = () => {
   const [section1] = SectionsText["Quartos"] || [];
@@ -35,11 +36,9 @@ const Rooms: React.FC = () => {
           {section1.description}
 
           <div className="rooms-card-wrapper">
-            <RoomCard image={ImgRoom4} />
-            <RoomCard image={ImgRoom4} />
-            <RoomCard image={ImgRoom4} />
-            <RoomCard image={ImgRoom4} />
-            <RoomCard image={ImgRoom4} />
+            {roomsCardContent.map(({ image, title }, idx) => (
+              <RoomCard image={image} key={idx + 1} title={title} />
+            ))}
           </div>
         </TextContent>
       </div>
