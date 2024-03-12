@@ -7,8 +7,12 @@ import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
 import { staticValues } from "../../constants";
 import "./styles.scss";
+import TextContent from "../../components/TextContent";
+import { SectionsText } from "../../types";
 
 const Rooms: React.FC = () => {
+  const [section1] = SectionsText["Quartos"] || [];
+
   return (
     <div className="rooms-container">
       <Header />
@@ -24,6 +28,12 @@ const Rooms: React.FC = () => {
           />
         </div>
       </CoverContent>
+
+      <div className="rooms-section">
+        <TextContent orientation="center" size="medium" title={section1.title}>
+          {section1.description}
+        </TextContent>
+      </div>
 
       <Footer />
     </div>

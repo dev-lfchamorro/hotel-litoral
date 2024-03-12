@@ -35,4 +35,11 @@ export const SectionsText: SectionTextMap = {
       title: "Lugar ideal",
     },
   ],
+  [EMenuOptions.rooms]: [
+    {
+      description:
+        "Os 23 quartos do Hotel Litoral foram projetados para descansar. Neles você pode desfrutar de um espaço adequado para a sua viagem e curtir a praia, pois está em uma excelente localização. Da mesma forma, nossos serviços são projetados para tornar a sua estadia muito mais agradável e divertida.",
+      title: "Reserve um quarto",
+    },
+  ],
 };

@@ -2,10 +2,24 @@
 
 .rooms-container {
   @include full-flex-dimensions;
+  align-items: center;
   overflow-y: initial;
 
   .cover-content {
     @include cover-content-styles($color-sextary);
+  }
+
+  .rooms-section {
+    margin-top: 4rem;
+    width: 70%;
+  }
+}
+
+@include mq-medium-device {
+  .rooms-container {
+    .rooms-section {
+      width: 100%;
+    }
   }
 }
 
