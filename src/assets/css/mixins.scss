@@ -130,3 +130,16 @@
     }
   }
 }
+
+// ** Forms **
+@mixin app-input {
+  background: $color-sextary;
+  border: none;
+  border-bottom: solid 2px $color-gray-dark;
+  color: $color-gray-dark;
+  font-size: 16px;
+  font-weight: 500;
+  height: 64px;
+  outline: none;
+  width: 100%;
+}
