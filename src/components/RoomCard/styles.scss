@@ -4,8 +4,11 @@
 $border-card: 1px solid $color-rgba-black-borders;
 
 .card {
+  -moz-box-shadow: 3px 3px 11px -4px $color-rgba-black-shadows;
+  -webkit-box-shadow: 3px 3px 11px -4px $color-rgba-black-shadows;
   @include flex-column-start;
   border-radius: 0.25rem;
+  box-shadow: 3px 3px 11px -4px $color-rgba-black-shadows;
   margin-top: 2rem;
   max-width: 350px;
   min-width: 250px;
