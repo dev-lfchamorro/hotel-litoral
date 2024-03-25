@@ -1,0 +1,13 @@
+@import "./../../assets/css/mixins.scss";
+
+.list-text-items-container {
+  @include flex-column-start;
+  font-size: 15px;
+  gap: 1rem;
+
+  li .title {
+    display: inline-block;
+    font-weight: 600;
+    width: 120px;
+  }
+}
