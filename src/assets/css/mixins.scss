@@ -100,6 +100,43 @@
   }
 }
 
+// ** Forms **
+@mixin app-input {
+  background: $color-sextary;
+  border: none;
+  border-bottom: solid 2px $color-gray-dark;
+  color: $color-gray-dark;
+  font-size: 16px;
+  font-weight: 500;
+  height: 64px;
+  outline: none;
+  width: 100%;
+}
+@mixin app-label {
+  color: $color-labels;
+  font-size: small;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@mixin basic-app-form-control {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    @include app-label;
+  }
+
+  input {
+    @include app-input;
+  }
+
+  span {
+    color: $color-red-validations;
+    font-size: x-small;
+    line-height: 15px;
+  }
+}
+
 // ** Universals **
 @mixin cover-content-styles($text-color) {
   @include flex-column-center;
@@ -129,17 +166,4 @@
       font-size: 16px !important;
     }
   }
-}
-
-// ** Forms **
-@mixin app-input {
-  background: $color-sextary;
-  border: none;
-  border-bottom: solid 2px $color-gray-dark;
-  color: $color-gray-dark;
-  font-size: 16px;
-  font-weight: 500;
-  height: 64px;
-  outline: none;
-  width: 100%;
 }
