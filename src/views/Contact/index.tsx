@@ -9,10 +9,13 @@ import Header from "../../components/common/Header";
 import InputText from "../../components/common/InputText";
 import TextArea from "../../components/common/Textarea";
 import { staticValues } from "../../constants";
+import { useContactForm } from "../../hooks";
 import { contactInfo } from "./constants";
 import "./styles.scss";
 
 const Contact: React.FC = () => {
+  const { errors, formData, handleChange, handleSave } = useContactForm();
+
   return (
     <div className="contact-container">
       <Header />
@@ -36,38 +39,59 @@ const Contact: React.FC = () => {
 
             <ListTextItems listItems={contactInfo} />
 
-            <form className="contat-form">
+            <div className="contat-form">
               <InputText
-                id="contact-name"
-                name="contact-name"
+                errorText={errors.name && errors.name}
+                hasError={!!errors.name}
+                id="name"
+                name="name"
                 placeholder="Seu nome *"
                 required
+                value={formData.name}
+                onChange={(e) => handleChange(e)}
               />
 
               <div className="contact-fields-wrapper">
                 <InputText
-                  id="contact-email"
-                  name="contact-email"
+                  errorText={errors.email && errors.email}
+                  hasError={!!errors.email}
+                  id="email"
+                  name="email"
                   placeholder="Seu email *"
                   required
+                  value={formData.email}
+                  onChange={(e) => handleChange(e)}
                 />
 
                 <InputText
-                  id="contact-phone"
-                  name="contact-phone"
+                  errorText={errors.phone && errors.phone}
+                  hasError={!!errors.phone}
+                  id="phone"
+                  name="phone"
                   placeholder="Seu telefone"
+                  pattern="^\+?[0-9\s\-\(\).]{8,20}$"
+                  value={formData.phone}
+                  onChange={(e) => handleChange(e)}
                 />
               </div>
 
               <TextArea
-                id="contact-message"
-                name="contact-message"
+                errorText={errors.message && errors.message}
+                hasError={!!errors.message}
+                id="message"
+                name="message"
                 placeholder="Mensagem *"
                 required
+                value={formData.message}
+                onChange={(e) => handleChange(e)}
               />
 
-              <Button text="Enviar" className="send-form-btn" />
-            </form>
+              <Button
+                text="Enviar"
+                className="send-form-btn"
+                onClick={handleSave}
+              />
+            </div>
           </div>
         </div>
 
