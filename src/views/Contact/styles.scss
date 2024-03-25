@@ -25,17 +25,6 @@
         max-width: 600px;
         padding: 5px;
 
-        ul {
-          @include flex-column-start;
-          font-size: 15px;
-          gap: 1rem;
-
-          li b {
-            display: inline-block;
-            width: 120px;
-          }
-        }
-
         form {
           display: flex;
           flex-direction: column;

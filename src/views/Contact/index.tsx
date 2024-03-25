@@ -3,9 +3,13 @@ import ImgWhatsApp from "../../assets/icons/whatsapp.svg";
 import ImgContact from "../../assets/img/images/contact.jpg";
 import Button from "../../components/Button";
 import CoverContent from "../../components/CoverContent";
+import ListTextItems from "../../components/ListTextItems";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
+import InputText from "../../components/common/InputText";
+import TextArea from "../../components/common/Textarea";
 import { staticValues } from "../../constants";
+import { contactInfo } from "./constants";
 import "./styles.scss";
 
 const Contact: React.FC = () => {
@@ -30,55 +34,36 @@ const Contact: React.FC = () => {
           <div className="contact-section-form-wrapper">
             <h1>Entrar em contato</h1>
 
-            <ul>
-              <li>
-                <b>Endereço:</b> Av.Oceânica, 819 Atalaia - Aracaju/SE
-              </li>
-              <li>
-                <b>Zap e Celular:</b> 79 9988.2442
-              </li>
-              <li>
-                <b>Recepção:</b> 79 3025.2441
-              </li>
-            </ul>
+            <ListTextItems listItems={contactInfo} />
 
             <form>
-              <div className="input-text-wrapper">
-                <input
-                  type="text"
-                  className="input-field"
-                  placeholder="Seu nome*"
-                  name="name"
+              <InputText
+                id="contact-name"
+                name="contact-name"
+                placeholder="Seu nome *"
+                required
+              />
+
+              <div className="contact-fields-wrapper">
+                <InputText
+                  id="contact-email"
+                  name="contact-email"
+                  placeholder="Seu email *"
+                  required
+                />
+
+                <InputText
+                  id="contact-phone"
+                  name="contact-phone"
+                  placeholder="Seu telefone"
                 />
               </div>
 
-              <div className="contact-fields-wrapper">
-                <div className="input-text-wrapper">
-                  <input
-                    type="text"
-                    className="input-field"
-                    placeholder="Seu email*"
-                    name="email"
-                  />
-                </div>
-
-                <div className="input-text-wrapper">
-                  <input
-                    type="text"
-                    className="input-field"
-                    placeholder="Seu telefone"
-                    name="phone"
-                  />
-                </div>
-              </div>
-
-              <div className="input-textarea-wrapper">
-                <textarea
-                  name="message"
-                  className="textarea-field"
-                  placeholder="Mensagem*"
-                ></textarea>
-              </div>
+              <TextArea
+                id="contact-message"
+                name="contact-message"
+                placeholder="Mensagem *"
+              />
 
               <Button text="Enviar" className="send-form-btn" />
             </form>
