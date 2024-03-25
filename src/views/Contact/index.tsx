@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                   id="phone"
                   name="phone"
                   placeholder="Seu telefone"
-                  pattern="^\+?[0-9\s\-\(\).]{8,20}$"
+                  pattern="(\+)?([0-9]){0,}"
                   value={formData.phone}
                   onChange={(e) => handleChange(e)}
                 />

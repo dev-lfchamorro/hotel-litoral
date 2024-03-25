@@ -9,6 +9,7 @@ const InputText: React.FC<InputTextProps> = ({
   id,
   label,
   name,
+  pattern,
   placeholder,
   readOnly = false,
   required,
@@ -21,6 +22,7 @@ const InputText: React.FC<InputTextProps> = ({
       <input
         id={id}
         name={name}
+        pattern={pattern}
         placeholder={placeholder}
         readOnly={readOnly}
         required={required}
