@@ -11,9 +11,9 @@ const TextArea: React.FC<TextareaProps> = ({
   label,
   name,
   placeholder,
+  readOnly = false,
   required,
   rows = 10,
-  readOnly = false,
   value,
   onChange,
 }) => {
@@ -21,16 +21,15 @@ const TextArea: React.FC<TextareaProps> = ({
     <div className={`textarea-wrapper ${className || ""}`}>
       {label && <label htmlFor={id}>{label}</label>}
       <textarea
-        className="textarea-field"
         cols={cols}
         id={id}
-        readOnly={readOnly}
         name={name}
         onChange={onChange}
         placeholder={placeholder}
+        readOnly={readOnly}
+        required={required}
         rows={rows}
         value={value}
-        required={required}
       ></textarea>
       {hasError && <span>{errorText}</span>}
     </div>

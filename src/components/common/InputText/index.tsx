@@ -10,6 +10,8 @@ const InputText: React.FC<InputTextProps> = ({
   label,
   name,
   placeholder,
+  readOnly = false,
+  required,
   value,
   onChange,
 }) => {
@@ -17,10 +19,11 @@ const InputText: React.FC<InputTextProps> = ({
     <div className={`input-text-wrapper ${className || ""}`}>
       {label && <label htmlFor={id}>{label}</label>}
       <input
-        className="input-field"
         id={id}
         name={name}
         placeholder={placeholder}
+        readOnly={readOnly}
+        required={required}
         type="text"
         value={value}
         onChange={onChange}

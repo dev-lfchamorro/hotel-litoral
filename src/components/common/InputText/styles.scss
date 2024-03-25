@@ -1,5 +1,7 @@
 @import "./../../../assets/css/mixins.scss";
 
-.input-wrapper {
+.input-text-wrapper {
+  width: 100%;
+
   @include basic-app-form-control;
 }

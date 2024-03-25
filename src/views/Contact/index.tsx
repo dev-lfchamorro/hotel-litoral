@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
 
             <ListTextItems listItems={contactInfo} />
 
-            <form>
+            <form className="contat-form">
               <InputText
                 id="contact-name"
                 name="contact-name"
