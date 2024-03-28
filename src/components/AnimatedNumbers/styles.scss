@@ -1,0 +1,38 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.animated-numbers-container {
+  color: $color-tertiary;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+
+  .content-numbers {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 1rem;
+
+    .number {
+      &.small {
+        font-size: 28px;
+      }
+
+      &.medium {
+        font-size: 48px;
+      }
+
+      &.big {
+        font-size: 72px;
+      }
+    }
+
+    .text {
+      font-size: 16px;
+      color: $color-gray-soft;
+    }
+  }
+}

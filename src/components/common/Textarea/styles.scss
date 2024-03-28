@@ -1,0 +1,19 @@
+@import "./../../../assets/css/mixins.scss";
+@import "./../../../assets/css/colors.scss";
+
+.textarea-wrapper {
+  textarea {
+    @include app-input;
+    height: 150px;
+    max-height: 250px;
+    min-height: 80px;
+    overflow: auto;
+    resize: vertical;
+  }
+
+  span {
+    color: $color-red-validations;
+    font-size: x-small;
+    line-height: 15px;
+  }
+}

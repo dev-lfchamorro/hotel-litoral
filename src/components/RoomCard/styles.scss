@@ -1,0 +1,65 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+$border-card: 1px solid $color-rgba-black-borders;
+
+.card {
+  -moz-box-shadow: 3px 3px 11px -4px $color-rgba-black-shadows;
+  -webkit-box-shadow: 3px 3px 11px -4px $color-rgba-black-shadows;
+  @include flex-column-start;
+  border-radius: 0.25rem;
+  box-shadow: 3px 3px 11px -4px $color-rgba-black-shadows;
+  margin-top: 2rem;
+  max-width: 350px;
+  min-width: 250px;
+
+  &-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    border: 0px solid transparent;
+    height: 262px;
+    width: 100%;
+  }
+
+  &-body,
+  &-footer {
+    border-bottom: $border-card;
+    border-left: $border-card;
+    border-right: $border-card;
+    padding: 8px;
+    width: calc(100% - 18px);
+  }
+
+  &-body {
+    .card-body-list-items {
+      .list-items {
+        gap: 0px;
+      }
+    }
+  }
+
+  &-footer {
+    align-items: center;
+    background-color: $color-rgba-black-cards;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: start;
+
+    img {
+      margin-left: 12px;
+    }
+  }
+}
+
+@include mq-small-device {
+  .card {
+    max-width: 290px;
+  }
+}

@@ -1,0 +1,15 @@
+.App {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+
+  .whatsapp-fixed {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../assets/css/colors.scss";
+@import "../../assets/css/mixins.scss";
+
+.nav-bar-container {
+  @include flex-row-end-center;
+  gap: 25px;
+
+  .navigation-container {
+    @include flex-row-space-between-center;
+
+    .hamburger-menu-open,
+    .hamburger-menu-close {
+      cursor: pointer;
+      display: none;
+    }
+  }
+
+  .buttons-container {
+    @include flex-row-center;
+  }
+}
+
+// ** Media Queries ** //
+
+// ** md **
+@include mq-medium-device {
+  .nav-bar-container {
+    .navigation-container {
+      order: 1;
+
+      .hamburger-menu-open,
+      .hamburger-menu-close {
+        display: flex;
+      }
+
+      .nav-container {
+        align-items: flex-end;
+        background-color: $color-rgba-sextary;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100vh;
+        opacity: 0;
+        padding: 2rem;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: all 200ms ease-out;
+        visibility: hidden;
+        width: 100vw;
+      }
+
+      .visible {
+        opacity: 0.99;
+        transition: all 400ms ease;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+// ** sm **
+@include mq-small-device {
+  .nav-bar-container {
+    .buttons-container {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

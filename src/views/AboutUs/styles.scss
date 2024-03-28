@@ -1,0 +1,44 @@
+@import "../../assets/css/mixins.scss";
+
+.about-us-container {
+  @include full-flex-dimensions;
+  overflow-y: initial;
+
+  .cover-content {
+    @include cover-content-styles($color-sextary);
+  }
+
+  .section1-container {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  .circular-progress-bar-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .section-parallax-container {
+    min-height: 600px;
+  }
+}
+
+@include mq-medium-device {
+  .about-us-container {
+    .section1-container {
+      margin-bottom: inherit;
+      margin-top: inherit;
+    }
+  }
+}
+
+@include mq-small-device {
+  .about-us-container {
+    .cover-content {
+      @include cover-content-styles-mq-small-device;
+    }
+  }
+}

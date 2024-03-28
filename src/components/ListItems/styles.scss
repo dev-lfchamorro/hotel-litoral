@@ -1,0 +1,50 @@
+@import "./../../assets/css/mixins.scss";
+@import "./../../assets/css/colors.scss";
+
+.list-items-container {
+  @include flex-column-start;
+  gap: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  padding: 5px;
+
+  .list-title {
+    color: $color-gray-dark;
+    font-weight: 700;
+  }
+
+  .important-content {
+    text-decoration: underline;
+  }
+
+  .list-description {
+    color: $color-rgba-tertiary;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .list-items {
+    color: $color-rgba-tertiary;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 12px;
+
+    & li {
+      align-items: center;
+      display: flex;
+      gap: 5px;
+    }
+  }
+}
+
+// ** sm **
+@include mq-small-device {
+  .list-items-container {
+    max-width: 300px;
+
+    .list-items {
+      flex-basis: 100%;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.testimonial-item {
+  @include flex-column-center;
+  background-color: $color-sextary;
+  color: $color-gray-dark;
+  font-size: medium;
+  height: 400px;
+  justify-content: space-evenly;
+  padding: 10px;
+  min-width: 345px;
+
+  .star-rating {
+    display: flex;
+    gap: 5px;
+
+    svg path {
+      fill: $color-yellow-dark;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .description {
+    align-items: center;
+    color: $color-gray-soft;
+    display: flex;
+    font-size: 15px;
+    height: 110px;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+
+  .avatar {
+    border-radius: 50px;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .author {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+}
+
+@include mq-large-device {
+  .testimonial-item {
+    min-width: 260px;
+  }
+}
+
+@include mq-medium-device {
+  .testimonial-item {
+    min-width: 315px;
+  }
+}
+
+@include mq-small-device {
+  .testimonial-item {
+    height: 300px;
+    min-width: 215px;
+
+    .title {
+      font-size: 14px;
+      height: 30px;
+    }
+
+    .description {
+      font-size: 12px;
+      height: 90px;
+    }
+
+    .avatar {
+      height: 70px;
+      width: 70px;
+    }
+
+    .author {
+      font-size: 12px;
+      line-height: 0.5;
+    }
+  }
+}
+
+@include mq-extra-small-device {
+  .testimonial-item {
+    min-width: 230px;
+  }
+}

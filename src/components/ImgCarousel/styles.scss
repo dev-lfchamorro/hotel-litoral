@@ -1,0 +1,52 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.img-carousel-container {
+  padding: 1rem 0;
+  width: 100%;
+
+  .img-carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+
+    .gallery {
+      display: flex;
+      flex-wrap: nowrap;
+
+      & .img-carousel-img {
+        height: calc(100vw / 4);
+        min-height: 200px;
+        min-width: 400px;
+        object-fit: cover;
+        pointer-events: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .info-text {
+    color: $color-gray-soft;
+    display: flex;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    gap: 5px;
+    margin-left: 15px;
+
+    svg path {
+      fill: $color-primary;
+      filter: saturate(500%);
+    }
+  }
+}
+
+@include mq-medium-device {
+  .img-carousel-container {
+    .img-carousel-wrapper .gallery {
+      & .img-carousel-img {
+        min-width: 200px;
+      }
+    }
+  }
+}

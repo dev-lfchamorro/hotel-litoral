@@ -1,0 +1,44 @@
+@import "../../assets/css/colors.scss";
+@import "../../assets/css/mixins.scss";
+
+// ** Fonts **
+@include define-font(
+  "Raleway-Bold",
+  "#{$font-path}/Raleway-Bold.ttf",
+  "truetype",
+  "bold",
+  "normal"
+);
+
+.nav-list {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 2rem;
+
+  a {
+    color: $color-sextary;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &.active {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+}
+
+@include mq-medium-device {
+  .nav-list {
+    align-items: flex-end;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 3rem;
+
+    & li a {
+      color: $color-tertiary;
+      font-family: Raleway-Bold;
+      font-size: 32px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.rooms-container {
+  @include full-flex-dimensions;
+  align-items: center;
+  overflow-y: initial;
+
+  .cover-content {
+    @include cover-content-styles($color-sextary);
+  }
+
+  .rooms-section {
+    margin-top: 4rem;
+    width: 70%;
+
+    .rooms-card-wrapper {
+      @include flex-row-center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+}
+
+@include mq-large-device {
+  .rooms-container {
+    .rooms-section {
+      width: 90%;
+    }
+  }
+}
+
+@include mq-medium-device {
+  .rooms-container {
+    .rooms-section {
+      width: 100%;
+    }
+  }
+}
+
+@include mq-small-device {
+  .rooms-container {
+    .cover-content {
+      @include cover-content-styles-mq-small-device;
+    }
+  }
+}

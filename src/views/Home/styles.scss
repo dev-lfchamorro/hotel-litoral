@@ -1,0 +1,70 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.home-container {
+  @include full-flex-dimensions;
+  align-items: center;
+  gap: 3rem;
+  overflow-y: initial;
+
+  .cover-content {
+    @include cover-content-styles($color-sextary);
+  }
+
+  .parallax-content-icon {
+    width: 12rem;
+    height: 12rem;
+
+    path,
+    rect,
+    polygon {
+      fill: $color-sextary;
+    }
+  }
+
+  .rooms-slider-section {
+    max-width: 1160px;
+    width: 100%;
+  }
+}
+
+@include mq-large-device {
+  .home-container {
+    .rooms-slider-section {
+      max-width: 900px;
+    }
+  }
+}
+
+@include mq-medium-device {
+  .home-container {
+    .parallax-content-icon {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .rooms-slider-section {
+      max-width: 700px;
+    }
+  }
+}
+
+@include mq-small-device {
+  .home-container {
+    .cover-content {
+      @include cover-content-styles-mq-small-device;
+    }
+
+    .rooms-slider-section {
+      max-width: 500px;
+    }
+  }
+}
+
+@include mq-extra-small-device {
+  .home-container {
+    .rooms-slider-section {
+      max-width: 270px;
+    }
+  }
+}

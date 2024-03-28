@@ -1,0 +1,42 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/colors.scss";
+
+.section-parallax-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.2) hue-rotate(0deg);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .parallax-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@include mq-medium-device {
+  .home-container {
+    .parallax-content {
+      gap: 1em;
+    }
+  }
+}

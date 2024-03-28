@@ -1,0 +1,39 @@
+@import "../../assets/css/colors.scss";
+@import "../../assets/css/mixins.scss";
+
+.circular-progress-container {
+  .circular-progress {
+    @include flex-row-center;
+    background: conic-gradient($color-primary 3.6deg, $color-sextary 0deg);
+    border-radius: 50%;
+    height: 170px;
+    position: relative;
+    width: 170px;
+
+    &::before {
+      background-color: $color-sextary;
+      border-radius: 50%;
+      content: "";
+      height: 160px;
+      position: absolute;
+      width: 160px;
+    }
+
+    .circular-progress-content {
+      @include flex-column-center;
+      position: relative;
+
+      .progress-value {
+        color: $color-tertiary;
+        font-size: 48px;
+        font-weight: 600;
+      }
+
+      .text {
+        color: $color-gray-soft;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}

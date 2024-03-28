@@ -1,0 +1,71 @@
+@import "../../assets/css/colors.scss";
+
+.logo {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .logo-name {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .primary-colors,
+    .secondary-colors {
+      display: flex;
+      justify-content: center;
+      padding: 5px 8px;
+      width: 100%;
+    }
+
+    .primary-colors {
+      border: 2px solid $color-sextary;
+      color: $color-sextary;
+    }
+
+    .secondary-colors {
+      border: 2px solid $color-gray-dark;
+      color: $color-gray-dark;
+    }
+
+    .md-size {
+      font-size: 24px;
+      gap: 5px;
+    }
+
+    .lg-size {
+      font-size: 42px;
+      gap: 15px;
+    }
+
+    span {
+      color: $color-primary;
+      font-weight: bold;
+    }
+  }
+
+  .logo-slogan {
+    border: none;
+    display: flex;
+
+    .primary-colors {
+      color: $color-primary;
+    }
+
+    .secondary-colors {
+      color: $color-gray-dark;
+    }
+
+    .md-size {
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    .lg-size {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
