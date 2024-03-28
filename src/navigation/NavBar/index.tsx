@@ -39,7 +39,6 @@ const NavBar: React.FC = () => {
       </div>
 
       <div className="buttons-container">
-        <Button text="Reservas" />
         <Button iconPath={IconTelephone} text="+55 79 99988.2442" />
       </div>
     </div>
