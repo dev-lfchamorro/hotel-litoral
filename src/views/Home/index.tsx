@@ -2,20 +2,16 @@ import React from "react";
 import { ReactComponent as IconBeachBed } from "../../assets/icons/beach-bed.svg";
 import { ReactComponent as IconBed } from "../../assets/icons/bed.svg";
 import { ReactComponent as IconHotel } from "../../assets/icons/hotel.svg";
-import ImgWhatsApp from "../../assets/icons/whatsapp.svg";
 import ImgSection1 from "../../assets/img/gallery/main-facade.jpeg";
-import ImgReception from "../../assets/img/gallery/reception.jpeg";
-import Button from "../../components/Button";
-import CoverContent from "../../components/CoverContent";
 import Feature from "../../components/Feature";
 import ImgCarousel from "../../components/ImgCarousel";
 import SectionImageText from "../../components/SectionImageText";
 import SectionParallax from "../../components/SectionParallax";
 import Slider from "../../components/Slider";
+import SliderReactSlick from "../../components/SliderReactSlick";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
-import { staticValues } from "../../constants";
 import { SectionsText } from "../../types";
 import { features, roomCardSlider } from "./constants";
 import "./styles.scss";
@@ -27,7 +23,7 @@ const Home: React.FC = () => {
     <div className="home-container">
       <Header />
 
-      <CoverContent bgImg={ImgReception}>
+      {/* <CoverContent bgImg={ImgReception}>
         <div className="cover-content">
           {staticValues.coverText}
           <Button
@@ -37,7 +33,8 @@ const Home: React.FC = () => {
             textSize={20}
           />
         </div>
-      </CoverContent>
+      </CoverContent> */}
+      <SliderReactSlick />
 
       <Feature features={features} />
 
