@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305.67703243905675!2d-37.045937711293256!3d-10.982537873292083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3fc0e660ddb%3A0x52931434e26ff077!2sLitoral!5e1!3m2!1spt-BR!2sco!4v1710297645141!5m2!1spt-BR!2sco"
+            src={process.env.REACT_APP_GM_EMBED}
             style={{ border: 0 }}
             title="HL-map"
           ></iframe>
