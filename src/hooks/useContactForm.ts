@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { isEmpty, isValidEmail, isValidPhone } from "../helpers";
 import { ContactForm } from "../types";
+import { getContactById } from "../services/api";
 
 export const useContactForm = () => {
   const initialValues: ContactForm = {
@@ -20,7 +21,7 @@ export const useContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (isEmpty(formData.name)) {
       setErrors({
         ...initialValues,
@@ -51,6 +52,16 @@ export const useContactForm = () => {
     }
 
     setErrors(initialValues);
+
+    console.log("pasa");
+
+    try {
+      const response = await getContactById(7);
+
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return { errors, handleChange, formData, handleSave };
