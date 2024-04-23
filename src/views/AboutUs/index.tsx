@@ -15,8 +15,7 @@ import Slider from "../../components/Slider";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
-import { staticValues } from "../../constants";
-import { SectionsText } from "../../types";
+import { SectionsText, staticValues } from "../../constants";
 import { animatedNumbersContent, testimonialCardSlider } from "./constants";
 import "./styles.scss";
 
