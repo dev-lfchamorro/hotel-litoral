@@ -53,8 +53,6 @@ export const useContactForm = () => {
 
     setErrors(initialValues);
 
-    console.log("pasa");
-
     try {
       const response = await getContactById(7);
 
