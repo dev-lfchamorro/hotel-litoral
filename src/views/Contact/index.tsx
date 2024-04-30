@@ -14,7 +14,8 @@ import { contactInfo } from "./constants";
 import "./styles.scss";
 
 const Contact: React.FC = () => {
-  const { errors, formData, handleChange, handleSave } = useContactForm();
+  const { errors, formData, handleChange, handleSave, isLoading } =
+    useContactForm();
 
   return (
     <div className="contact-container">
@@ -87,8 +88,9 @@ const Contact: React.FC = () => {
               />
 
               <Button
-                text="Enviar"
                 className="send-form-btn"
+                isLoading={isLoading}
+                text="Enviar"
                 onClick={handleSave}
               />
             </div>
@@ -103,7 +105,7 @@ const Contact: React.FC = () => {
             src={process.env.REACT_APP_GM_EMBED}
             style={{ border: 0 }}
             title="HL-map"
-          ></iframe>
+          />
         </div>
       </div>
 

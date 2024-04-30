@@ -13,6 +13,7 @@ export const useContactForm = () => {
 
   const [formData, setFormData] = useState<ContactForm>(initialValues);
   const [errors, setErrors] = useState<ContactForm>(initialValues);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -54,7 +55,11 @@ export const useContactForm = () => {
     setErrors(initialValues);
 
     try {
+      setIsLoading(true);
+
       const response = await getContactById(7);
+
+      setIsLoading(false);
 
       console.log(response);
     } catch (error) {
@@ -62,5 +67,5 @@ export const useContactForm = () => {
     }
   };
 
-  return { errors, handleChange, formData, handleSave };
+  return { errors, handleChange, formData, handleSave, isLoading };
 };
