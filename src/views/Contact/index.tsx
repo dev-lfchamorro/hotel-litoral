@@ -3,6 +3,7 @@ import ImgWhatsApp from "../../assets/icons/whatsapp.svg";
 import ImgContact from "../../assets/img/images/contact.jpg";
 import Button from "../../components/Button";
 import CoverContent from "../../components/CoverContent";
+import Iframe from "../../components/Iframe";
 import ListTextItems from "../../components/ListTextItems";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
@@ -16,6 +17,8 @@ import "./styles.scss";
 const Contact: React.FC = () => {
   const { errors, formData, handleChange, handleSave, isLoading } =
     useContactForm();
+
+  const urlMap = process.env.REACT_APP_GM_EMBED;
 
   return (
     <div className="contact-container">
@@ -98,14 +101,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="contact-section-map">
-          <iframe
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src={process.env.REACT_APP_GM_EMBED}
-            style={{ border: 0 }}
-            title="HL-map"
-          />
+          {urlMap && <Iframe title="HL-map" url={urlMap} />}
         </div>
       </div>
 
