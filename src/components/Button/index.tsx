@@ -24,7 +24,11 @@ const Button: React.FC<ButtonProps> = ({
   }, [iconPath]);
 
   return (
-    <button className={`button ${cursorType} ${className}`} onClick={onClick}>
+    <button
+      className={`button ${cursorType} ${className}`}
+      disabled={isLoading}
+      onClick={isLoading ? () => false : onClick}
+    >
       {isLoading ? (
         <Loader />
       ) : (
