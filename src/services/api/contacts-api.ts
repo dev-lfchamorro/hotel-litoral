@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios";
 import { endpoints } from "../../constants";
-import { CreateContact, ResultContact } from "../../models/api";
-import { genericGet, genericPost } from "./api-service";
+import { CreateContact, ResultContact, UpdateContact } from "../../models/api";
+import { genericGet, genericPost, genericPut } from "./api-service";
 
 export const getContactById = async (
   id: number
@@ -18,6 +18,16 @@ export const createContact = async (
 ): Promise<AxiosResponse<ResultContact>> => {
   try {
     return await genericPost(`${endpoints.contacts.create}`, body);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updateContact = async (
+  body: UpdateContact
+): Promise<AxiosResponse<ResultContact>> => {
+  try {
+    return await genericPut(`${endpoints.contacts.update}`, body);
   } catch (error) {
     throw error;
   }
