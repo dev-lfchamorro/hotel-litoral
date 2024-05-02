@@ -1,6 +1,11 @@
 import { AxiosResponse } from "axios";
 import { endpoints } from "../../constants";
-import { CreateContact, ResultContact, UpdateContact } from "../../models/api";
+import {
+  CreateContact,
+  GenericResponse,
+  ResultContact,
+  UpdateContact,
+} from "../../models/api";
 import {
   genericDelete,
   genericGet,
@@ -40,7 +45,7 @@ export const updateContact = async (
 
 export const deleteContact = async (
   id: number
-): Promise<AxiosResponse<ResultContact>> => {
+): Promise<AxiosResponse<GenericResponse>> => {
   try {
     return await genericDelete(`${endpoints.contacts.delete}${id}`);
   } catch (error) {
