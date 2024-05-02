@@ -1,7 +1,12 @@
 import { AxiosResponse } from "axios";
 import { endpoints } from "../../constants";
 import { CreateContact, ResultContact, UpdateContact } from "../../models/api";
-import { genericGet, genericPost, genericPut } from "./api-service";
+import {
+  genericDelete,
+  genericGet,
+  genericPost,
+  genericPut,
+} from "./api-service";
 
 export const getContactById = async (
   id: number
@@ -28,6 +33,16 @@ export const updateContact = async (
 ): Promise<AxiosResponse<ResultContact>> => {
   try {
     return await genericPut(`${endpoints.contacts.update}`, body);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteContact = async (
+  id: number
+): Promise<AxiosResponse<ResultContact>> => {
+  try {
+    return await genericDelete(`${endpoints.contacts.delete}${id}`);
   } catch (error) {
     throw error;
   }
