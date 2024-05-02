@@ -59,7 +59,10 @@ export const useContactForm = () => {
 
       await createContact(formData);
 
-      setIsLoading(false);
+      setTimeout(() => {
+        setFormData(initialValues);
+        setIsLoading(false);
+      }, 1500);
     } catch (error) {
       console.error(error);
     }
