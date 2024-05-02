@@ -57,11 +57,9 @@ export const useContactForm = () => {
     try {
       setIsLoading(true);
 
-      const response = await createContact(formData);
+      await createContact(formData);
 
       setIsLoading(false);
-
-      console.log(response);
     } catch (error) {
       console.error(error);
     }
