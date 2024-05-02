@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { isEmpty, isValidEmail, isValidPhone } from "../helpers";
+import { createContact } from "../services/api";
 import { ContactForm } from "../types";
-import { getContactById } from "../services/api";
 
 export const useContactForm = () => {
   const initialValues: ContactForm = {
@@ -57,7 +57,7 @@ export const useContactForm = () => {
     try {
       setIsLoading(true);
 
-      const response = await getContactById(7);
+      const response = await createContact(formData);
 
       setIsLoading(false);
 
