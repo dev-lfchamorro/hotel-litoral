@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { isEmpty, isValidEmail, isValidPhone } from "../helpers";
+import { createContact } from "../services/api";
 import { ContactForm } from "../types";
 
 export const useContactForm = () => {
@@ -12,6 +13,7 @@ export const useContactForm = () => {
 
   const [formData, setFormData] = useState<ContactForm>(initialValues);
   const [errors, setErrors] = useState<ContactForm>(initialValues);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -20,7 +22,7 @@ export const useContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (isEmpty(formData.name)) {
       setErrors({
         ...initialValues,
@@ -51,7 +53,20 @@ export const useContactForm = () => {
     }
 
     setErrors(initialValues);
+
+    try {
+      setIsLoading(true);
+
+      await createContact(formData);
+
+      setTimeout(() => {
+        setFormData(initialValues);
+        setIsLoading(false);
+      }, 1500);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  return { errors, handleChange, formData, handleSave };
+  return { errors, handleChange, formData, handleSave, isLoading };
 };

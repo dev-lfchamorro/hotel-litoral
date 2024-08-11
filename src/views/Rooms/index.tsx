@@ -7,8 +7,7 @@ import RoomCard from "../../components/RoomCard";
 import TextContent from "../../components/TextContent";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
-import { staticValues } from "../../constants";
-import { SectionsText } from "../../types";
+import { SectionsText, staticValues } from "../../constants";
 import { roomsCardContent } from "./constants";
 import "./styles.scss";
 
