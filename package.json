@@ -11,6 +11,7 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "animate.css": "^4.1.1",
+    "axios": "^1.6.8",
     "framer-motion": "^11.0.5",
     "react": "^18.2.0",
     "react-avatar": "^5.0.3",
@@ -23,9 +24,10 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://hotellitoral.com.br/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env.local react-scripts start",
+    "build": "env-cmd -f .env react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }

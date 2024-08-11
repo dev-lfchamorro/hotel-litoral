@@ -3,6 +3,7 @@ import ImgWhatsApp from "../../assets/icons/whatsapp.svg";
 import ImgContact from "../../assets/img/images/contact.jpg";
 import Button from "../../components/Button";
 import CoverContent from "../../components/CoverContent";
+import Iframe from "../../components/Iframe";
 import ListTextItems from "../../components/ListTextItems";
 import Footer from "../../components/common/Footer";
 import Header from "../../components/common/Header";
@@ -14,7 +15,10 @@ import { contactInfo } from "./constants";
 import "./styles.scss";
 
 const Contact: React.FC = () => {
-  const { errors, formData, handleChange, handleSave } = useContactForm();
+  const { errors, formData, handleChange, handleSave, isLoading } =
+    useContactForm();
+
+  const urlMap = process.env.REACT_APP_GM_EMBED;
 
   return (
     <div className="contact-container">
@@ -87,8 +91,9 @@ const Contact: React.FC = () => {
               />
 
               <Button
-                text="Enviar"
                 className="send-form-btn"
+                isLoading={isLoading}
+                text="Enviar"
                 onClick={handleSave}
               />
             </div>
@@ -96,14 +101,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="contact-section-map">
-          <iframe
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305.67703243905675!2d-37.045937711293256!3d-10.982537873292083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3fc0e660ddb%3A0x52931434e26ff077!2sLitoral!5e1!3m2!1spt-BR!2sco!4v1710297645141!5m2!1spt-BR!2sco"
-            style={{ border: 0 }}
-            title="HL-map"
-          ></iframe>
+          {urlMap && <Iframe title="HL-map" url={urlMap} />}
         </div>
       </div>
 
