@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Suspense>
-        <FixedContent>
+        {/* <FixedContent>
           <a
             className="whatsapp-fixed"
             href={whatsAppLink()}
@@ -18,7 +18,7 @@ const App: React.FC = () => {
           >
             <img src={IconWhatsApp} alt="Whatsapp" loading="lazy" />
           </a>
-        </FixedContent>
+        </FixedContent> */}
 
         <AppRouter />
       </Suspense>

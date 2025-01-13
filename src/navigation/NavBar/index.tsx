@@ -39,7 +39,7 @@ const NavBar: React.FC = () => {
       </div>
 
       <div className="buttons-container">
-        <Button iconPath={IconTelephone} text="+55 79 99988.2442" />
+        <Button iconPath={IconTelephone} text="+55 79 3025.2441" />
       </div>
     </div>
   );
