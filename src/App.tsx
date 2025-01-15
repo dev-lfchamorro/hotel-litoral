@@ -20,6 +20,21 @@ const App: React.FC = () => {
           </a>
         </FixedContent> */}
 
+        <FixedContent>
+          <span
+            style={{
+              color: "#fff",
+              padding: "10px",
+              backgroundColor: "#ffa37b",
+              borderRadius: "5px",
+              display: "inline-block",
+              marginLeft: "10px",
+            }}
+          >
+            NÃO UTILIZEM O ZAP <b>+55 79 99988.2442</b> (ESTÁ CLONADO)
+          </span>
+        </FixedContent>
+
         <AppRouter />
       </Suspense>
     </div>
