@@ -7,6 +7,7 @@ import Icon from "../../components/Icon";
 import { IconSize } from "../../components/Icon/enums";
 import MenuOptions from "../MenuOptions";
 import "./styles.scss";
+import { staticValues } from "../../constants";
 
 const NavBar: React.FC = () => {
   const [visibleMenu, setVisibleMenu] = useState("");
@@ -39,7 +40,7 @@ const NavBar: React.FC = () => {
       </div>
 
       <div className="buttons-container">
-        <Button iconPath={IconTelephone} text="+55 79 99988.2442" />
+        <Button iconPath={IconTelephone} text={staticValues.whatsApp} />
       </div>
     </div>
   );
