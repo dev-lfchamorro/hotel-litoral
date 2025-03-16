@@ -1,8 +1,6 @@
 import React, { Suspense } from "react";
 import "./App.scss";
-import IconWhatsApp from "./assets/icons/whatsapp-color.svg";
 import FixedContent from "./components/FixedContent";
-import { whatsAppLink } from "./constants";
 import AppRouter from "./navigation/AppRouter";
 
 const App: React.FC = () => {
