@@ -1,8 +1,6 @@
 import React, { Suspense } from "react";
 import "./App.scss";
-import IconWhatsApp from "./assets/icons/whatsapp-color.svg";
 import FixedContent from "./components/FixedContent";
-import { whatsAppLink } from "./constants";
 import AppRouter from "./navigation/AppRouter";
 
 const App: React.FC = () => {
@@ -10,14 +8,18 @@ const App: React.FC = () => {
     <div className="App">
       <Suspense>
         <FixedContent>
-          <a
-            className="whatsapp-fixed"
-            href={whatsAppLink()}
-            target="_blank"
-            rel="noreferrer"
+          <span
+            style={{
+              color: "rgb(255, 255, 255)",
+              padding: 10,
+              backgroundColor: "rgb(255, 163, 123)",
+              borderRadius: 5,
+              display: "inline-block",
+              marginLeft: 10,
+            }}
           >
-            <img src={IconWhatsApp} alt="Whatsapp" loading="lazy" />
-          </a>
+            NÃO UTILIZEM O ZAP <b>+55 79 99988.2442</b> (ESTÁ CLONADO)
+          </span>
         </FixedContent>
 
         <AppRouter />
