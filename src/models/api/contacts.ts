@@ -2,6 +2,7 @@ export interface BasicContact {
   name: string;
   email: string;
   phone: string;
+  message: string;
 }
 
 export interface ResultContact extends BasicContact {
